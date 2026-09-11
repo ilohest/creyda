@@ -117,14 +117,15 @@ h2 { font-size: clamp(3rem, 6.2vw, 6.8rem); }
 
 .opening { padding: 110px 0 150px; display: grid; grid-template-columns: .55fr 1.45fr; grid-template-areas: "aside title" "aside content"; column-gap: 7vw; }
 .opening-title { grid-area: title; max-width: 920px; margin-bottom: 50px; }
-.opening aside { grid-area: aside; display: flex; min-height: 920px; flex-direction: column; }
+.opening aside { grid-area: aside; display: flex; min-height: 920px; position: relative; isolation: isolate; flex-direction: column; }
+.opening aside > :not(.sun-mark) { position: relative; z-index: 1; }
 .opening aside > p { font-size: 1.15rem; line-height: 1.25; }
 .opening aside .text-link { margin-top: 80px; }
 .radiant-mark { --ray-color: var(--green); --ray-width: 1.4deg; --ray-step: 9deg; display: block; aspect-ratio: 1; border-radius: 50%; background: repeating-conic-gradient(from 0deg, var(--ray-color) 0 var(--ray-width), transparent var(--ray-width) var(--ray-step)); -webkit-mask: radial-gradient(circle, transparent 0 30%, #000 30.8% 100%); mask: radial-gradient(circle, transparent 0 30%, #000 30.8% 100%); transform-origin: center; will-change: transform; pointer-events: none; }
 .radiant-mark--dense { --ray-width: 1deg; --ray-step: 7.2deg; }
 .radiant-mark--airy { --ray-width: 1.8deg; --ray-step: 12deg; }
 .radiant-mark--light { --ray-color: var(--mint); }
-.sun-mark { width: min(23vw, 300px); margin-top: auto; }
+.sun-mark { width: min(23vw, 300px); margin-top: auto; position: relative; z-index: 0; opacity: .58; }
 .opening-main { grid-area: content; }
 .opening-gallery { width: min(100%, 920px); display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(10px, 1.5vw, 22px); }
 .opening-gallery figure { margin: 0; overflow: hidden; background: var(--mist); }
