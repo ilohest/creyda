@@ -83,7 +83,7 @@ onBeforeUnmount(() => window.removeEventListener('keydown', handleKeydown))
     <PageIntro
       eyebrow="La vie du centre"
       title="Le yoga, en mouvement."
-      text="Des gestes, des souffles et des moments partagés au centre Creyda. Cliquez sur une image pour la découvrir en grand."
+      text="Des gestes, des souffles et des moments partagés au centre Creyda."
     />
 
     <section class="gallery-editorial wrap" aria-label="Galerie de la pratique au centre Creyda">
@@ -98,7 +98,7 @@ onBeforeUnmount(() => window.removeEventListener('keydown', handleKeydown))
             <img :src="photo.src" :alt="photo.alt" :loading="index < 2 ? 'eager' : 'lazy'" width="1920" height="1920">
             <span aria-hidden="true">+</span>
           </button>
-          <figcaption><span>{{ String(index + 1).padStart(2, '0') }}</span>{{ photo.caption }}</figcaption>
+          <figcaption>{{ photo.caption }}</figcaption>
         </figure>
       </div>
     </section>
