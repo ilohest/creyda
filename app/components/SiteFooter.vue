@@ -2,6 +2,7 @@
   <footer class="site-footer">
     <div class="footer-head">
       <NuxtLink to="/" class="footer-wordmark" aria-label="Creyda Yoga — accueil">
+        <img src="/images/logo-creyda.png" alt="" width="36" height="36">
         <strong>CREYDA</strong>
       </NuxtLink>
       <p>Centre de relaxation et d’étude du yoga, au cœur d’Ixelles.</p>
