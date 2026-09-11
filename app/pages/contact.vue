@@ -1,7 +1,7 @@
 <script setup lang="ts">
 useSeoMeta({ title: 'Contact' })
 
-const directionsUrl = 'https://www.google.com/maps/search/?api=1&query=106+Avenue+G%C3%A9n%C3%A9ral+M%C3%A9decin+Derache%2C+1050+Ixelles'
+const directionsUrl = 'https://www.google.com/maps/place/Centre+Yoga+Ixelles+:+Yoga+Bruxelles+Creyda+Sport/@50.8143634,4.3867333,17.42z/data=!4m6!3m5!1s0x47c3c4c27e6be593:0x24a3ce06f25c7f71!8m2!3d50.8143222!4d4.3885429!16s%2Fg%2F11bzx3d847?entry=ttu&g_ep=EgoyMDI2MDkwOC4wIKXMDSoASAFQAw%3D%3D'
 const mapUrl = 'https://www.openstreetmap.org/export/embed.html?bbox=4.3778%2C50.8102%2C4.3941%2C50.8184&layer=mapnik&marker=50.814325%2C4.385968'
 </script>
 
@@ -48,7 +48,7 @@ const mapUrl = 'https://www.openstreetmap.org/export/embed.html?bbox=4.3778%2C50
         <div class="contact-place__facts">
           <div>
             <span>Adresse</span>
-            <p>106 avenue Général Médecin Derache<br>1050 Ixelles, Bruxelles</p>
+            <p><a :href="directionsUrl" target="_blank" rel="noopener noreferrer">106 avenue Général Médecin Derache<br>1050 Ixelles, Bruxelles</a></p>
           </div>
           <div>
             <span>Transports</span>
@@ -77,7 +77,7 @@ const mapUrl = 'https://www.openstreetmap.org/export/embed.html?bbox=4.3778%2C50
       <div class="contact-map__card">
         <p class="eyebrow light">50.8143° N · 4.3860° E</p>
         <h2 id="contact-map-title">CREYDA<br>Ixelles</h2>
-        <p>106 avenue Général Médecin Derache<br>1050 Bruxelles</p>
+        <p><a :href="directionsUrl" target="_blank" rel="noopener noreferrer">106 avenue Général Médecin Derache<br>1050 Bruxelles</a></p>
         <a :href="directionsUrl" target="_blank" rel="noopener noreferrer">Ouvrir l’itinéraire <span>→</span></a>
       </div>
     </section>
@@ -95,11 +95,11 @@ const mapUrl = 'https://www.openstreetmap.org/export/embed.html?bbox=4.3778%2C50
           <p class="eyebrow light">Centre de relaxation</p>
           <p class="account-card__iban">BE59 9796<br>3088 0426</p>
         </article>
-        <article class="account-card account-card--light">
-          <p class="eyebrow">Fondation A. Van Lysebeth</p>
+        <article class="account-card">
+          <p class="eyebrow light">Fondation A. Van Lysebeth</p>
           <p class="account-card__iban">BE79 9733<br>5587 3533</p>
         </article>
-        <blockquote>« Plus on est de fous,<br>plus il y a de yogis ! »</blockquote>
+        <blockquote><span>«&nbsp;Plus on est de fous,</span><span>plus il y a de yogis&nbsp;!&nbsp;»</span></blockquote>
       </div>
     </section>
   </main>
