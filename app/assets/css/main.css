@@ -98,36 +98,24 @@ h2 { font-size: clamp(3rem, 6.2vw, 6.8rem); }
 .hero h1 { grid-column: 1 / 3; align-self: center; margin: .25em 0; max-width: 1250px; }
 .hero-intro { grid-column: 2; display: grid; grid-template-columns: minmax(180px, 320px) auto; align-items: end; gap: 50px; }
 .hero-intro p { margin: 0; font-size: clamp(1.1rem, 1.7vw, 1.55rem); line-height: 1.25; }
-.text-link { width: fit-content; padding-bottom: 6px; display: inline-flex; align-items: center; position: relative; font-family: var(--button-font); font-size: .78rem; white-space: nowrap; }
-.text-link::before { content: ""; height: 1px; position: absolute; right: 0; bottom: 0; left: 0; background: currentColor; transform-origin: right; transition: transform .35s cubic-bezier(.22, 1, .36, 1); }
-.text-link span { width: 29px; height: 29px; margin-left: 14px; display: inline-grid; place-items: center; border: 1px solid currentColor; border-radius: 50%; font-family: var(--sans); font-size: 1.15rem; line-height: 1; transition: transform .35s cubic-bezier(.22, 1, .36, 1), background-color .3s ease, color .3s ease; }
-.text-link:hover::before { transform: scaleX(.28); }
-.text-link:hover span { transform: translate(3px, -2px); background: var(--green); color: var(--white); }
-.res-teaser .text-link:hover span, .wellbeing-cta .text-link:hover span { background: var(--white); color: var(--green); }
+.text-link { width: fit-content; min-height: 44px; padding: 10px 15px; display: inline-flex; align-items: center; justify-content: center; border: 1px solid currentColor; border-radius: 2px; font-family: var(--button-font); font-size: .78rem; font-weight: 500; letter-spacing: .015em; white-space: nowrap; transition: transform .3s cubic-bezier(.22, 1, .36, 1), box-shadow .3s ease, background-color .3s ease, color .3s ease; }
+.text-link::before { content: none; }
+.text-link span { margin-left: 28px; display: inline-block; font-family: var(--sans); font-size: 1.15rem; line-height: 1; transition: transform .35s cubic-bezier(.22, 1, .36, 1); }
+.text-link:hover { transform: translateY(-2px); box-shadow: 5px 5px 0 rgba(29,29,29,.14); }
+.text-link:hover span { transform: translateX(7px); }
 
 .opening { padding: 110px 0 150px; display: grid; grid-template-columns: .55fr 1.45fr; gap: 7vw; }
 .opening aside { display: flex; min-height: 920px; flex-direction: column; }
 .opening aside > p { font-size: 1.15rem; line-height: 1.25; }
 .opening aside .text-link { margin-top: 80px; }
-.radiant-mark { display: block; aspect-ratio: 1; overflow: visible; color: var(--green); pointer-events: none; }
-.radiant-mark--light { color: var(--mint); }
-.radiant-mark__orbit { transform-origin: 100px 100px; animation: radiant-orbit 18s cubic-bezier(.45, 0, .2, 1) 1.8s infinite alternate; }
-.radiant-mark__ray { stroke: currentColor; stroke-width: 1.35; stroke-linecap: round; stroke-dasharray: 1; transform-origin: 100px 100px; animation: radiant-unfold 1.35s cubic-bezier(.16, 1, .3, 1) var(--ray-delay) both, radiant-curve 7s ease-in-out calc(1.6s + var(--ray-delay)) infinite alternate; }
-.radiant-mark--dense .radiant-mark__ray { stroke-width: 1; }
-.radiant-mark--airy .radiant-mark__ray { stroke-width: 1.65; }
+.radiant-mark { --ray-color: var(--green); --ray-width: 1.4deg; --ray-gap: 9deg; display: block; aspect-ratio: 1; border-radius: 50%; background: repeating-conic-gradient(from 0deg, var(--ray-color) 0 var(--ray-width), transparent var(--ray-width) var(--ray-gap)); -webkit-mask: radial-gradient(circle, transparent 0 30%, #000 30.8% 100%); mask: radial-gradient(circle, transparent 0 30%, #000 30.8% 100%); animation: radiant-breathe 7s cubic-bezier(.45, 0, .2, 1) infinite alternate; transform-origin: center; pointer-events: none; }
+.radiant-mark--dense { --ray-width: 1deg; --ray-gap: 6.5deg; }
+.radiant-mark--airy { --ray-width: 1.8deg; --ray-gap: 12deg; }
+.radiant-mark--light { --ray-color: var(--mint); }
 .sun-mark { width: min(23vw, 300px); margin-top: auto; }
-@keyframes radiant-unfold {
-  0% { opacity: 0; stroke-dashoffset: 1; transform: rotate(-5deg) scale(.72); }
-  45% { opacity: .72; }
-  100% { opacity: 1; stroke-dashoffset: 0; transform: rotate(0) scale(1); }
-}
-@keyframes radiant-curve {
-  from { transform: rotate(var(--ray-turn-reverse)) scaleY(.985); }
-  to { transform: rotate(var(--ray-turn)) scaleY(1.018); }
-}
-@keyframes radiant-orbit {
-  from { transform: rotate(-1.2deg) scale(.992); }
-  to { transform: rotate(1.2deg) scale(1.008); }
+@keyframes radiant-breathe {
+  from { transform: rotate(-2deg) scale(.98); }
+  to { transform: rotate(2deg) scale(1.025); }
 }
 .opening-main h2 { max-width: 920px; margin-bottom: 70px; }
 .opening-main img { width: 100%; height: min(72vw, 850px); object-fit: cover; filter: grayscale(1) contrast(1.08); }
@@ -426,9 +414,9 @@ h2 { font-size: clamp(3rem, 6.2vw, 6.8rem); }
   .page-enter-from,
   .page-leave-to,
   .has-reveal .reveal-text { opacity: 1; transform: none; }
-  .radiant-mark__orbit, .radiant-mark__ray { animation: none; }
-  .nav-cta, .button, .text-link::before, .text-link span, .footer-directory a::after, .gallery-item img, .gallery-item button > span, .gallery-lightbox, .gallery-lightbox figure { transition: none; }
-  .nav-cta:hover, .button:hover, .nav-cta:hover::after, .button:hover::after, .text-link:hover span { transform: none; }
+  .radiant-mark { animation: none; }
+  .nav-cta, .button, .text-link, .text-link span, .footer-directory a::after, .gallery-item img, .gallery-item button > span, .gallery-lightbox, .gallery-lightbox figure { transition: none; }
+  .nav-cta:hover, .button:hover, .text-link:hover, .nav-cta:hover::after, .button:hover::after, .text-link:hover span { transform: none; }
 }
 
 @media (max-width: 900px) {
