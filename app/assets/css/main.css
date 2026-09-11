@@ -61,7 +61,7 @@ h2 { font-size: clamp(3rem, 6.2vw, 6.8rem); }
 .brand { display: flex; align-items: center; gap: 11px; }
 .brand img { width: 36px; height: 36px; object-fit: contain; filter: grayscale(1) contrast(1.4); }
 .brand span { display: flex; flex-direction: column; line-height: 1; }
-.brand strong { font-size: .92rem; letter-spacing: .12em; }
+.brand strong { font-family: var(--display); font-size: .92rem; font-weight: 600; letter-spacing: .08em; }
 .brand small { margin-top: 5px; font-size: .62rem; color: var(--muted); }
 .site-header nav { display: flex; align-items: center; gap: 34px; }
 .site-header nav a { font-size: .8rem; }
