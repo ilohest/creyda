@@ -18,16 +18,6 @@
         <a href="mailto:contact@creyda-yoga.be">contact@creyda-yoga.be</a>
         <a href="tel:+32474971657">+32 474 97 16 57</a>
       </div>
-      <nav aria-label="Navigation de pied de page">
-        <span class="footer-label">Explorer</span>
-        <NuxtLink to="/yoga">Le yoga</NuxtLink>
-        <NuxtLink to="/bien-etre">Bien-être</NuxtLink>
-        <NuxtLink to="/methode-res">Méthode R.E.S.</NuxtLink>
-        <NuxtLink to="/tarifs">Tarifs</NuxtLink>
-        <NuxtLink to="/galerie">Galerie</NuxtLink>
-        <NuxtLink to="/articles">Articles</NuxtLink>
-        <NuxtLink to="/contact">Contact</NuxtLink>
-      </nav>
       <div class="footer-return">
         <span class="footer-label">Retour</span>
         <a href="#top">Haut de page <span>↑</span></a>
