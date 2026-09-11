@@ -14,6 +14,8 @@ interface Haze {
   speed: number
   driftX: number
   driftY: number
+  pointerX: number
+  pointerY: number
 }
 
 const canvas = ref<HTMLCanvasElement | null>(null)
@@ -24,7 +26,7 @@ const colors: Rgb[] = [
   [232, 231, 226]
 ]
 
-const pointer = { active: false, x: 0, y: 0 }
+const pointer = { active: false, x: 0, y: 0, smoothX: 0, smoothY: 0 }
 let context: CanvasRenderingContext2D | null = null
 let frame = 0
 let observer: ResizeObserver | null = null
@@ -56,7 +58,9 @@ function createHazes() {
       phase: seededRandom(index + 59) * Math.PI * 2,
       speed: .00026 + seededRandom(index + 77) * .00028,
       driftX: 58 + seededRandom(index + 91) * 92,
-      driftY: 46 + seededRandom(index + 109) * 76
+      driftY: 46 + seededRandom(index + 109) * 76,
+      pointerX: (seededRandom(index + 127) * 2 - 1) * (42 + seededRandom(index + 139) * 72),
+      pointerY: (seededRandom(index + 151) * 2 - 1) * (34 + seededRandom(index + 163) * 58)
     }
   })
 }
@@ -66,6 +70,10 @@ function resize() {
   const bounds = canvas.value.getBoundingClientRect()
   width = bounds.width
   height = bounds.height
+  if (!pointer.active) {
+    pointer.smoothX = width * .5
+    pointer.smoothY = height * .48
+  }
   ratio = Math.min(window.devicePixelRatio || 1, 1.25)
   canvas.value.width = Math.round(width * ratio)
   canvas.value.height = Math.round(height * ratio)
@@ -85,6 +93,11 @@ function update(haze: Haze, time: number) {
     + Math.cos(motion * .37 + haze.phase * 1.2) * haze.driftY * .2
 
   if (pointer.active) {
+    const normalizedX = (pointer.smoothX / width - .5) * 2
+    const normalizedY = (pointer.smoothY / height - .5) * 2
+    targetX += normalizedX * haze.pointerX
+    targetY += normalizedY * haze.pointerY
+
     const dx = haze.x - pointer.x
     const dy = haze.y - pointer.y
     const distance = Math.hypot(dx, dy) || 1
@@ -118,6 +131,11 @@ function paint(haze: Haze) {
 
 function draw(time = 0, schedule = true) {
   if (!context) return
+  const restingX = width * .5
+  const restingY = height * .48
+  const pointerEase = pointer.active ? .075 : .025
+  pointer.smoothX += ((pointer.active ? pointer.x : restingX) - pointer.smoothX) * pointerEase
+  pointer.smoothY += ((pointer.active ? pointer.y : restingY) - pointer.smoothY) * pointerEase
   context.clearRect(0, 0, width, height)
   context.globalCompositeOperation = 'multiply'
   hazes.forEach((haze) => {
@@ -134,6 +152,10 @@ function handlePointerMove(event: PointerEvent) {
   pointer.active = event.clientX >= bounds.left && event.clientX <= bounds.right && event.clientY >= bounds.top && event.clientY <= bounds.bottom
   pointer.x = event.clientX - bounds.left
   pointer.y = event.clientY - bounds.top
+  if (!pointer.smoothX && !pointer.smoothY) {
+    pointer.smoothX = pointer.x
+    pointer.smoothY = pointer.y
+  }
 }
 
 function handlePointerLeave() {
@@ -173,6 +195,8 @@ onBeforeUnmount(() => {
   z-index: 0;
   opacity: .92;
   filter: blur(34px) saturate(.92);
+  -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 68%, rgba(0, 0, 0, .88) 78%, rgba(0, 0, 0, .38) 91%, transparent 100%);
+  mask-image: linear-gradient(to bottom, #000 0%, #000 68%, rgba(0, 0, 0, .88) 78%, rgba(0, 0, 0, .38) 91%, transparent 100%);
   pointer-events: none;
   transform: translateZ(0);
 }
