@@ -7,3 +7,5 @@ node_modules/
 *.sql.gz
 *.sql.zip
 www.zip
+.vercel
+.env*
