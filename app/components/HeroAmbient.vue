@@ -54,9 +54,9 @@ function createHazes() {
       radius: Math.min(width < 700 ? 230 : 350, 170 + seededRandom(index + 41) * 220),
       color: colors[index % colors.length],
       phase: seededRandom(index + 59) * Math.PI * 2,
-      speed: .00018 + seededRandom(index + 77) * .0002,
-      driftX: 35 + seededRandom(index + 91) * 70,
-      driftY: 28 + seededRandom(index + 109) * 58
+      speed: .00026 + seededRandom(index + 77) * .00028,
+      driftX: 58 + seededRandom(index + 91) * 92,
+      driftY: 46 + seededRandom(index + 109) * 76
     }
   })
 }
@@ -76,23 +76,28 @@ function resize() {
 }
 
 function update(haze: Haze, time: number) {
-  let targetX = haze.baseX + Math.sin(time * haze.speed + haze.phase) * haze.driftX
-  let targetY = haze.baseY + Math.cos(time * haze.speed * .78 + haze.phase) * haze.driftY
+  const motion = time * haze.speed + haze.phase
+  let targetX = haze.baseX
+    + Math.sin(motion) * haze.driftX
+    + Math.sin(motion * .43 + haze.phase * .7) * haze.driftX * .22
+  let targetY = haze.baseY
+    + Math.cos(motion * .78) * haze.driftY
+    + Math.cos(motion * .37 + haze.phase * 1.2) * haze.driftY * .2
 
   if (pointer.active) {
     const dx = haze.x - pointer.x
     const dy = haze.y - pointer.y
     const distance = Math.hypot(dx, dy) || 1
-    const radius = Math.min(430, width * .34)
+    const radius = Math.min(520, width * .4)
     if (distance < radius) {
       const force = Math.pow((radius - distance) / radius, 2)
-      targetX += (dx / distance) * force * 90
-      targetY += (dy / distance) * force * 90
+      targetX += (dx / distance) * force * 135
+      targetY += (dy / distance) * force * 135
     }
   }
 
-  haze.vx = (haze.vx + (targetX - haze.x) * .008) * .92
-  haze.vy = (haze.vy + (targetY - haze.y) * .008) * .92
+  haze.vx = (haze.vx + (targetX - haze.x) * .0095) * .925
+  haze.vy = (haze.vy + (targetY - haze.y) * .0095) * .925
   haze.x += haze.vx
   haze.y += haze.vy
 }
