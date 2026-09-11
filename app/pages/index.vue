@@ -5,6 +5,7 @@ useSeoMeta({ title: 'Centre de yoga intégral à Ixelles' })
 <template>
   <main>
     <section class="hero">
+      <HeroAmbient />
       <p class="hero-kicker">Centre de yoga intégral · Bruxelles</p>
       <h1>Yoga<br>avec Creyda</h1>
       <div class="hero-intro">
