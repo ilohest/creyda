@@ -12,21 +12,24 @@ let animationFrame = 0
 let lastFrame = 0
 let lastScrollY = 0
 let angle = 0
-let scrollBoost = 0
+let scrollDirection = 1
+let scrollVelocity = 0
 
 function handleScroll() {
   const delta = window.scrollY - lastScrollY
   lastScrollY = window.scrollY
-  angle += delta * 0.035
-  scrollBoost = Math.min(1, scrollBoost + Math.abs(delta) / 320)
+  if (Math.abs(delta) < 0.5) return
+
+  scrollDirection = delta > 0 ? 1 : -1
+  scrollVelocity = scrollDirection * Math.min(0.06, 0.012 + Math.abs(delta) * 0.0012)
 }
 
 function animate(time: number) {
   if (!lastFrame) lastFrame = time
   const elapsed = Math.min(time - lastFrame, 40)
   lastFrame = time
-  angle += elapsed * (0.0018 + scrollBoost * 0.018)
-  scrollBoost *= Math.pow(0.965, elapsed / 16.67)
+  angle += elapsed * (scrollDirection * 0.0018 + scrollVelocity)
+  scrollVelocity *= Math.pow(0.9, elapsed / 16.67)
 
   const scale = 1 + Math.sin(time / 1400) * 0.018
   if (mark.value) mark.value.style.transform = `rotate(${angle}deg) scale(${scale})`
