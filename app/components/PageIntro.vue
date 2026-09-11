@@ -3,7 +3,7 @@ defineProps<{ eyebrow?: string; title: string; text: string }>()
 </script>
 
 <template>
-  <section class="page-intro wrap">
+  <section class="page-intro wrap" :class="{ 'page-intro--without-eyebrow': !eyebrow }">
     <p v-if="eyebrow" class="eyebrow">{{ eyebrow }}</p>
     <h1>{{ title }}</h1>
     <p class="lead">{{ text }}</p>
