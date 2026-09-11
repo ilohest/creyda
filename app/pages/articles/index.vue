@@ -1,10 +1,9 @@
 <script setup lang="ts">
 import articles from '~/data/articles.json'
 
-useSeoMeta({
-  title: 'Articles',
-  description: 'Textes, recherches et archives autour du yoga, de la philosophie et de la vie spirituelle au centre Creyda.'
-})
+const title = 'Articles sur le yoga et la philosophie'
+const description = 'Lisez les articles et recherches du centre Creyda autour du yoga, de la philosophie, des symboles et de la vie spirituelle.'
+useSeoMeta({ title, description, ogTitle: title, ogDescription: description, twitterTitle: title, twitterDescription: description })
 </script>
 
 <template>

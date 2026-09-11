@@ -11,6 +11,8 @@ if (!article.value) {
 
 const previousArticle = computed(() => articleIndex.value > 0 ? articles[articleIndex.value - 1] : null)
 const nextArticle = computed(() => articleIndex.value < articles.length - 1 ? articles[articleIndex.value + 1] : null)
+const articleUrl = computed(() => `https://creyda-yoga.be/articles/${article.value.slug}`)
+const articleImage = computed(() => new URL(article.value.image, 'https://creyda-yoga.be').toString())
 const accessibleContent = computed(() => article.value.content
   .replaceAll('<h4>', '<h2>')
   .replaceAll('</h4>', '</h2>'))
@@ -20,8 +22,48 @@ useSeoMeta({
   description: () => article.value.excerpt,
   ogTitle: () => article.value.title,
   ogDescription: () => article.value.excerpt,
-  ogImage: () => article.value.image
+  ogType: 'article',
+  ogImage: articleImage,
+  ogImageAlt: () => article.value.imageAlt,
+  articlePublishedTime: () => article.value.date,
+  twitterTitle: () => article.value.title,
+  twitterDescription: () => article.value.excerpt,
+  twitterImage: articleImage,
+  twitterImageAlt: () => article.value.imageAlt
 })
+
+useHead(() => ({
+  script: [{
+    key: 'article-schema',
+    type: 'application/ld+json',
+    innerHTML: JSON.stringify({
+      '@context': 'https://schema.org',
+      '@graph': [
+        {
+          '@type': 'BlogPosting',
+          '@id': `${articleUrl.value}#article`,
+          mainEntityOfPage: articleUrl.value,
+          headline: article.value.title,
+          description: article.value.excerpt,
+          image: articleImage.value,
+          datePublished: article.value.date,
+          dateModified: article.value.date,
+          inLanguage: 'fr-BE',
+          author: { '@id': 'https://creyda-yoga.be/#organization' },
+          publisher: { '@id': 'https://creyda-yoga.be/#organization' }
+        },
+        {
+          '@type': 'BreadcrumbList',
+          itemListElement: [
+            { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://creyda-yoga.be/' },
+            { '@type': 'ListItem', position: 2, name: 'Articles', item: 'https://creyda-yoga.be/articles' },
+            { '@type': 'ListItem', position: 3, name: article.value.title, item: articleUrl.value }
+          ]
+        }
+      ]
+    })
+  }]
+}))
 </script>
 
 <template>

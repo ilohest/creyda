@@ -1,8 +1,7 @@
 <script setup lang="ts">
-useSeoMeta({
-  title: 'Méthode R.E.S.',
-  description: 'Découvrez la méthode Rythme, Équilibre, Synchronicité créée par Patrick Noblet, son parcours en cinq étapes et le contenu de la formation.'
-})
+const title = 'Méthode R.E.S. — Rythme, Équilibre, Synchronicité'
+const description = 'Découvrez la méthode R.E.S. créée par Patrick Noblet à Bruxelles : un parcours de développement personnel en cinq étapes et sa formation.'
+useSeoMeta({ title, description, ogTitle: title, ogDescription: description, twitterTitle: title, twitterDescription: description })
 
 const steps = [
   {

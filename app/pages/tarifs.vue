@@ -1,5 +1,7 @@
 <script setup lang="ts">
-useSeoMeta({ title: 'Tarifs' })
+const title = 'Tarifs des cours de yoga et formations'
+const description = 'Consultez les tarifs Creyda : cours d’essai, séances de yoga à Ixelles, forfaits, bien-être et formation à la méthode R.E.S.'
+useSeoMeta({ title, description, ogTitle: title, ogDescription: description, twitterTitle: title, twitterDescription: description })
 
 const yoga = [
   { title: 'Cours d’essai', price: '10 €', unit: 'la séance', details: ['Un cours d’essai par personne'] },

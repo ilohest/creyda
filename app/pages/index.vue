@@ -1,5 +1,65 @@
 <script setup lang="ts">
-useSeoMeta({ title: 'Centre de yoga intégral à Ixelles' })
+const title = 'Centre de yoga intégral à Ixelles'
+const description = 'Cours de Hatha Yoga, Prânayâma et méditation en petits groupes à Ixelles. Découvrez Creyda, la méthode R.E.S. et les séances de bien-être.'
+
+useSeoMeta({
+  title,
+  description,
+  ogTitle: title,
+  ogDescription: description,
+  twitterTitle: title,
+  twitterDescription: description
+})
+
+useHead({
+  script: [{
+    key: 'local-business-schema',
+    type: 'application/ld+json',
+    innerHTML: JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': ['LocalBusiness', 'SportsActivityLocation'],
+      '@id': 'https://creyda-yoga.be/#organization',
+      name: 'Creyda Yoga',
+      legalName: 'CREYDA ASBL',
+      description,
+      url: 'https://creyda-yoga.be/',
+      logo: 'https://creyda-yoga.be/images/logo-creyda.png',
+      image: 'https://creyda-yoga.be/og.png',
+      telephone: '+32474971657',
+      email: 'contact@creyda-yoga.be',
+      priceRange: '€€',
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: '106 avenue Général Médecin Derache',
+        postalCode: '1050',
+        addressLocality: 'Ixelles',
+        addressRegion: 'Bruxelles-Capitale',
+        addressCountry: 'BE'
+      },
+      geo: {
+        '@type': 'GeoCoordinates',
+        latitude: 50.8143222,
+        longitude: 4.3885429
+      },
+      areaServed: ['Ixelles', 'Bruxelles'],
+      founder: { '@type': 'Person', name: 'Patrick Noblet' },
+      openingHoursSpecification: [
+        {
+          '@type': 'OpeningHoursSpecification',
+          dayOfWeek: ['Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+          opens: '10:30',
+          closes: '12:00'
+        },
+        {
+          '@type': 'OpeningHoursSpecification',
+          dayOfWeek: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+          opens: '17:30',
+          closes: '19:00'
+        }
+      ]
+    })
+  }]
+})
 </script>
 
 <template>

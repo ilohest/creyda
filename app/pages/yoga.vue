@@ -1,5 +1,7 @@
 <script setup lang="ts">
-useSeoMeta({ title: 'Yoga traditionnel et intégral' })
+const title = 'Yoga traditionnel et intégral à Ixelles'
+const description = 'Pratiquez le Hatha Yoga, le Prânayâma et la méditation Dhyâna chez Creyda à Ixelles, dans des groupes de dix personnes maximum.'
+useSeoMeta({ title, description, ogTitle: title, ogDescription: description, twitterTitle: title, twitterDescription: description })
 const pillars = [
   { number: '01', title: 'Hatha Yoga', text: 'Composé de postures accessibles progressivement. La souplesse est un moyen, jamais une fin.' },
   { number: '02', title: 'Prânayâma', text: 'Le travail du souffle favorise la circulation de l’énergie, l’attention et une régulation profonde.' },

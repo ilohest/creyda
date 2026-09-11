@@ -1,8 +1,7 @@
 <script setup lang="ts">
-useSeoMeta({
-  title: 'Galerie',
-  description: 'Quelques instants de pratique, de respiration et d’accompagnement au centre Creyda à Ixelles.'
-})
+const title = 'Galerie du centre de yoga Creyda'
+const description = 'Découvrez en images les cours de yoga, la méditation et l’accompagnement proposés au centre Creyda à Ixelles, Bruxelles.'
+useSeoMeta({ title, description, ogTitle: title, ogDescription: description, twitterTitle: title, twitterDescription: description })
 
 const photos = [
   { src: '/images/gallery/pratique-01.jpg', alt: 'Professeur de yoga assis sur un tapis pendant une séance', caption: 'Présence', shape: 'wide' },

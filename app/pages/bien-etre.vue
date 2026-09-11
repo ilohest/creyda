@@ -1,8 +1,7 @@
 <script setup lang="ts">
-useSeoMeta({
-  title: 'Séances de bien-être',
-  description: 'Séances individuelles de relaxation à Ixelles et conseils pour vivre sa journée avec davantage de détente et de conscience.'
-})
+const title = 'Séances de bien-être à Ixelles'
+const description = 'Séances individuelles de relaxation et de bien-être à Ixelles avec Patrick Noblet : acupressure, étirements, Reiki et écoute attentive.'
+useSeoMeta({ title, description, ogTitle: title, ogDescription: description, twitterTitle: title, twitterDescription: description })
 
 const daySteps = [
   {

@@ -1,8 +1,7 @@
 <script setup lang="ts">
-useSeoMeta({
-  title: 'Accessibilité',
-  description: 'Engagement et fonctionnalités d’accessibilité du site Creyda Yoga.'
-})
+const title = 'Accessibilité du site Creyda Yoga'
+const description = 'Découvrez l’engagement et les fonctionnalités d’accessibilité du site Creyda Yoga, conçu avec WCAG 2.2 niveau AA comme référence.'
+useSeoMeta({ title, description, ogTitle: title, ogDescription: description, twitterTitle: title, twitterDescription: description })
 </script>
 
 <template>
