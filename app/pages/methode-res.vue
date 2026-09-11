@@ -98,9 +98,13 @@ const laws = [
     </section>
 
     <section class="steps wrap">
-      <p class="eyebrow">Le parcours</p>
-      <h2>Un changement en cinq étapes.</h2>
-      <p class="steps-intro">Ouverte à tous et étalée sur un minimum de 200 heures, cette méthode de transformation suit les cinq animaux du kung-fu. L’équilibre retrouvé est l’aboutissement d’un travail personnel.</p>
+      <header class="steps-heading">
+        <p class="eyebrow">Le parcours</p>
+        <div class="steps-heading__row">
+          <h2>Un changement en cinq étapes.</h2>
+          <p class="steps-intro">Ouverte à tous et étalée sur un minimum de 200 heures, cette méthode de transformation suit les cinq animaux du kung-fu. L’équilibre retrouvé est l’aboutissement d’un travail personnel.</p>
+        </div>
+      </header>
       <ol>
         <li v-for="(step, index) in steps" :key="step.title">
           <span>0{{ index + 1 }}</span>

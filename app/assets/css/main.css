@@ -200,7 +200,8 @@ h2 { font-size: clamp(3rem, 6.2vw, 6.8rem); }
 .quote-section blockquote { max-width: 1100px; margin: 0 auto 26px; font-family: var(--display); font-size: clamp(2.4rem, 5vw, 5rem); line-height: 1.05; letter-spacing: -.04em; }
 .quote-section cite { color: var(--green); font-style: normal; }
 .steps { padding: 120px 0; }
-.steps > h2 { max-width: 800px; }
+.steps-heading__row { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(300px, .75fr); gap: clamp(50px, 8vw, 130px); align-items: end; }
+.steps-heading h2 { max-width: 800px; margin: 0; }
 .steps ol { margin: 75px 0 0; padding: 0; list-style: none; }
 .steps li { display: grid; grid-template-columns: 90px 1fr; padding: 30px 0; border-top: 1px solid var(--line); }
 .steps li > span { color: var(--green); font-size: .7rem; }
@@ -225,7 +226,7 @@ h2 { font-size: clamp(3rem, 6.2vw, 6.8rem); }
 .res-rebirth__grid > div:last-child { max-width: 720px; }
 .res-rebirth__grid p { color: rgba(255,255,255,.8); }
 .res-rebirth blockquote { margin: 55px 0; font-family: var(--display); font-size: clamp(2rem, 3.6vw, 4rem); line-height: 1.05; letter-spacing: -.04em; }
-.steps-intro { max-width: 700px; margin: 30px 0 0 auto; color: var(--muted); font-size: 1.05rem; }
+.steps-intro { max-width: 470px; margin: 0; justify-self: end; color: var(--muted); font-size: 1.05rem; text-align: right; }
 .steps li p { max-width: 780px; }
 .steps li blockquote { max-width: 700px; margin: 22px 0 0; color: var(--green); font-family: var(--display); font-size: 1.35rem; line-height: 1.2; }
 .res-signature { margin: 35px 0 0; color: var(--muted); font-size: .78rem; text-transform: uppercase; letter-spacing: .08em; }
@@ -561,6 +562,8 @@ h2 { font-size: clamp(3rem, 6.2vw, 6.8rem); }
   .split-copy { padding: 75px 0; }
   .cta-panel { width: 100%; padding: 55px 20px; }
   .steps { padding: 80px 0; }
+  .steps-heading__row { grid-template-columns: 1fr; gap: 30px; }
+  .steps-intro { max-width: 620px; justify-self: start; text-align: left; }
   .steps li { grid-template-columns: 50px 1fr; }
   .res-editorial-image { width: 100%; margin-bottom: 80px; }
   .res-editorial-image img { height: 58vh; }
