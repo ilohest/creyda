@@ -22,7 +22,17 @@ useSeoMeta({ title: 'Centre de yoga intégral à Ixelles' })
       </aside>
       <div class="opening-main">
         <h2>Quand une sagesse ancienne rencontre votre quotidien.</h2>
-        <img src="/images/pratique-yoga.jpg" alt="Pratique attentive du yoga au centre Creyda">
+        <div class="opening-gallery">
+          <figure>
+            <img src="/images/gallery/pratique-01.jpg" alt="Pratique au sol pendant un cours de yoga au centre Creyda">
+          </figure>
+          <figure>
+            <img src="/images/gallery/pratique-06.jpg" alt="Moment de méditation pendant une séance au centre Creyda">
+          </figure>
+          <figure>
+            <img src="/images/gallery/pratique-09.jpg" alt="Posture d’équilibre pratiquée au centre Creyda">
+          </figure>
+        </div>
         <p class="opening-statement">Hatha Yoga, Prânayâma et méditation Dhyâna réunis dans une expérience cohérente du corps et de l’esprit.</p>
       </div>
     </section>

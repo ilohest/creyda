@@ -115,8 +115,11 @@ h2 { font-size: clamp(3rem, 6.2vw, 6.8rem); }
 .radiant-mark--airy { --ray-width: 1.8deg; --ray-step: 12deg; }
 .radiant-mark--light { --ray-color: var(--mint); }
 .sun-mark { width: min(23vw, 300px); margin-top: auto; }
-.opening-main h2 { max-width: 920px; margin-bottom: 70px; }
-.opening-main img { width: 100%; height: min(72vw, 850px); object-fit: cover; filter: grayscale(1) contrast(1.08); }
+.opening-main h2 { max-width: 920px; margin-bottom: 50px; }
+.opening-gallery { width: min(100%, 920px); display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(10px, 1.5vw, 22px); }
+.opening-gallery figure { margin: 0; overflow: hidden; background: var(--mist); }
+.opening-gallery img { display: block; width: 100%; aspect-ratio: 1; object-fit: cover; filter: grayscale(1) contrast(1.08); transition: transform .65s cubic-bezier(.2, .75, .2, 1), filter .65s ease; }
+.opening-gallery figure:hover img { transform: scale(1.025); filter: grayscale(.82) contrast(1.04); }
 .opening-statement { max-width: 1050px; margin: 70px 0 0; font-family: var(--display); font-size: clamp(2rem, 4.3vw, 4.7rem); line-height: 1.05; letter-spacing: -.04em; }
 
 .practice-band { margin: 0 max(40px, calc((100vw - 1380px)/2)); display: grid; grid-template-columns: 1.08fr .92fr; align-items: center; background: var(--mist); }
@@ -532,7 +535,7 @@ h2 { font-size: clamp(3rem, 6.2vw, 6.8rem); }
   .hero-intro { grid-template-columns: 1fr; gap: 28px; }
   .opening aside { display: block; }
   .opening aside .text-link { display: inline-flex; margin-top: 28px; }
-  .opening-main img { height: 68vh; }
+  .opening-gallery { gap: 7px; }
   .opening-statement { margin-top: 45px; }
   .practice-band, .res-photo { margin-inline: 0; }
   .practice-copy { padding: 55px 20px; }
