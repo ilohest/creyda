@@ -25,6 +25,7 @@
         <NuxtLink to="/methode-res">Méthode R.E.S.</NuxtLink>
         <NuxtLink to="/tarifs">Tarifs</NuxtLink>
         <NuxtLink to="/galerie">Galerie</NuxtLink>
+        <NuxtLink to="/articles">Articles</NuxtLink>
         <NuxtLink to="/contact">Contact</NuxtLink>
       </nav>
       <div class="footer-return">

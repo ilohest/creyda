@@ -9,7 +9,8 @@ const links = [
   { to: '/bien-etre', label: 'Bien-être' },
   { to: '/methode-res', label: 'Méthode R.E.S.' },
   { to: '/tarifs', label: 'Tarifs' },
-  { to: '/galerie', label: 'Galerie' }
+  { to: '/galerie', label: 'Galerie' },
+  { to: '/articles', label: 'Articles' }
 ]
 </script>
 
