@@ -121,7 +121,10 @@ const changeStep = (direction: number) => {
         <p class="eyebrow">Le parcours</p>
         <div class="steps-heading__row">
           <h2 id="res-steps-title">Un changement en cinq étapes.</h2>
-          <p class="steps-intro">Ouverte à tous et étalée sur un minimum de 200 heures, cette méthode de transformation suit les cinq animaux du kung-fu. L’équilibre retrouvé est l’aboutissement d’un travail personnel.</p>
+          <div class="steps-heading__copy">
+            <p class="steps-intro">Ouverte à tous et étalée sur un minimum de 200 heures, cette méthode de transformation suit les cinq animaux du kung-fu. L’équilibre retrouvé est l’aboutissement d’un travail personnel.</p>
+            <p class="res-signature">Patrick Noblet, auteur de la méthode R.E.S.</p>
+          </div>
         </div>
       </header>
       <div
@@ -160,7 +163,6 @@ const changeStep = (direction: number) => {
           <button type="button" aria-label="Afficher l’étape suivante" aria-controls="res-steps-track" @click="changeStep(1)">→</button>
         </div>
       </div>
-      <p class="res-signature">Patrick Noblet, auteur de la méthode R.E.S.</p>
     </section>
 
     <section class="res-manifesto wrap">
