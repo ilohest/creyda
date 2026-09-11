@@ -41,7 +41,7 @@
 :root {
   --mist: #e8e7e2;
   --mint: #f4ffef;
-  --green: #1e774c;
+  --green: #1d744a;
   --green-ink: #175f3c;
   --ink: #1d1d1d;
   --white: #ffffff;
@@ -490,7 +490,7 @@ h2 { font-size: clamp(3rem, 6.2vw, 6.8rem); }
 .article-plate-gallery { padding: 15px 0 125px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(55px, 7vw, 100px) clamp(24px, 4vw, 58px); }
 .article-plate-gallery figure { margin: 0; }
 .article-plate-gallery figure:nth-child(3n + 2) { margin-top: clamp(45px, 6vw, 90px); }
-.article-plate-gallery img { width: 100%; background: var(--mist); filter: grayscale(1) contrast(1.04); }
+.article-plate-gallery img { width: 100%; height: auto; background: var(--mist); filter: grayscale(1) contrast(1.04); }
 .article-plate-gallery figcaption { margin-top: 12px; color: var(--green); font-family: var(--button-font); font-size: .75rem; letter-spacing: .09em; text-align: center; text-transform: uppercase; }
 .article-download { margin-bottom: 110px; padding: 80px; background: var(--mint); }
 .article-download h2 { margin: 28px 0 24px; font-size: clamp(3rem, 6vw, 6rem); }

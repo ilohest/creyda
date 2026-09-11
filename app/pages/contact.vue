@@ -65,7 +65,7 @@ const mapUrl = 'https://www.openstreetmap.org/export/embed.html?bbox=4.3778%2C50
         <a class="button" :href="directionsUrl" target="_blank" rel="noopener noreferrer">Voir l’itinéraire<span class="sr-only"> (nouvel onglet)</span></a>
       </div>
       <div class="contact-image">
-        <img src="/images/centre-creyda.jpg" alt="Entrée du centre Creyda à Ixelles">
+        <img src="/images/centre-creyda.jpg" alt="Entrée du centre Creyda à Ixelles" loading="lazy" decoding="async" width="2200" height="1503">
       </div>
     </section>
 

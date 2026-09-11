@@ -7,7 +7,7 @@ export default defineNuxtConfig({
       titleTemplate: '%s · Creyda Yoga',
       meta: [
         { name: 'description', content: 'Centre de yoga traditionnel et intégral à Ixelles, Bruxelles. Cours en petits groupes, méthode R.E.S. et séances de bien-être.' },
-        { name: 'theme-color', content: '#1e774c' },
+        { name: 'theme-color', content: '#1d744a' },
         { property: 'og:title', content: 'Creyda Yoga — Yoga intégral à Ixelles' },
         { property: 'og:description', content: 'Cours de yoga traditionnel en petits groupes, méthode R.E.S. et séances de bien-être à Ixelles, Bruxelles.' },
         { property: 'og:type', content: 'website' },
@@ -20,7 +20,8 @@ export default defineNuxtConfig({
         { name: 'twitter:image:alt', content: 'Creyda Yoga, centre de yoga intégral à Ixelles' }
       ],
       link: [
-        { rel: 'icon', type: 'image/png', href: '/images/logo-creyda.png' }
+        { rel: 'icon', type: 'image/png', href: '/images/logo-creyda.png' },
+        { rel: 'preload', href: '/fonts/Coconat-Regular.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous' }
       ]
     }
   },

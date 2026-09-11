@@ -2,6 +2,7 @@ node_modules/
 .nuxt/
 .output/
 .sites-runtime/
+.vercel/
 *.sql
 *.sql.gz
 *.sql.zip

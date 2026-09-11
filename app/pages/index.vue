@@ -84,13 +84,13 @@ useHead({
       <div class="opening-main">
         <div class="opening-gallery">
           <figure>
-            <img src="/images/gallery/pratique-01.jpg" alt="Pratique au sol pendant un cours de yoga au centre Creyda">
+            <img src="/images/gallery/pratique-01.jpg" srcset="/images/gallery/pratique-01-480.webp 480w, /images/gallery/pratique-01-960.webp 960w, /images/gallery/pratique-01.jpg 1920w" sizes="(max-width: 900px) 31vw, 300px" alt="Pratique au sol pendant un cours de yoga au centre Creyda" loading="lazy" decoding="async" width="1920" height="1920">
           </figure>
           <figure>
-            <img src="/images/gallery/pratique-06.jpg" alt="Moment de méditation pendant une séance au centre Creyda">
+            <img src="/images/gallery/pratique-06.jpg" srcset="/images/gallery/pratique-06-480.webp 480w, /images/gallery/pratique-06-960.webp 960w, /images/gallery/pratique-06.jpg 1656w" sizes="(max-width: 900px) 31vw, 300px" alt="Moment de méditation pendant une séance au centre Creyda" loading="lazy" decoding="async" width="1656" height="1656">
           </figure>
           <figure>
-            <img src="/images/gallery/pratique-09.jpg" alt="Posture d’équilibre pratiquée au centre Creyda">
+            <img src="/images/gallery/pratique-09.jpg" srcset="/images/gallery/pratique-09-480.webp 480w, /images/gallery/pratique-09-960.webp 960w, /images/gallery/pratique-09.jpg 1792w" sizes="(max-width: 900px) 31vw, 300px" alt="Posture d’équilibre pratiquée au centre Creyda" loading="lazy" decoding="async" width="1792" height="1379">
           </figure>
         </div>
         <p class="opening-statement">Hatha Yoga, Prânayâma et méditation Dhyâna réunis dans une expérience cohérente du corps et de l’esprit.</p>
@@ -98,7 +98,7 @@ useHead({
     </section>
 
     <section class="practice-band">
-      <div class="practice-image"><img src="/images/gallery/pratique-04.jpg" alt="Deux participantes dans une posture d’ouverture au centre Creyda"></div>
+      <div class="practice-image"><img src="/images/gallery/pratique-04.jpg" srcset="/images/gallery/pratique-04-640.webp 640w, /images/gallery/pratique-04-960.webp 960w, /images/gallery/pratique-04.jpg 1920w" sizes="(max-width: 900px) 100vw, 52vw" alt="Deux participantes dans une posture d’ouverture au centre Creyda" loading="lazy" decoding="async" width="1920" height="1920"></div>
       <div class="practice-copy">
         <h2>Une pratique attentive, loin de la performance.</h2>
         <div class="practice-list">

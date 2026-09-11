@@ -22,6 +22,7 @@ useSeoMeta({ title, description, ogTitle: title, ogDescription: description, twi
               :src="article.image"
               :alt="article.imageAlt"
               :loading="index < 3 ? 'eager' : 'lazy'"
+              decoding="async"
               width="900"
               height="1125"
             >

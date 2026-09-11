@@ -112,7 +112,7 @@ function toggleDayStep(index: number) {
 
     <section class="wellbeing-opening wrap">
       <div class="wellbeing-opening__image">
-        <img src="/images/accompagnement.jpg" alt="Accompagnement individuel au centre Creyda">
+        <img src="/images/accompagnement.jpg" alt="Accompagnement individuel au centre Creyda" loading="lazy" decoding="async" width="1600" height="1540">
       </div>
       <div class="wellbeing-opening__copy">
         <p class="eyebrow">Faire connaissance</p>

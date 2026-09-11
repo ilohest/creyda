@@ -76,14 +76,14 @@ useHead(() => ({
     </header>
 
     <figure class="article-cover wrap">
-      <img :src="article.image" :alt="article.imageAlt" width="1600" height="1000">
+      <img :src="article.image" :alt="article.imageAlt" loading="lazy" decoding="async" width="1600" height="1000">
     </figure>
 
     <article class="article-body wrap" v-html="accessibleContent" />
 
     <section v-if="article.gallery?.length" class="article-plate-gallery wrap" aria-label="Planches du Mutus Liber">
       <figure v-for="(image, index) in article.gallery" :key="image">
-        <img :src="image" :alt="`Mutus Liber — planche ${index + 1}`" loading="lazy" width="683" height="1024">
+        <img :src="image" :alt="`Mutus Liber — planche ${index + 1}`" loading="lazy" decoding="async" width="683" height="1024">
         <figcaption>Planche {{ String(index + 1).padStart(2, '0') }}</figcaption>
       </figure>
     </section>

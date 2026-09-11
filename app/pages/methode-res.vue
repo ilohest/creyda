@@ -100,7 +100,7 @@ const changeStep = (direction: number) => {
     </section>
 
     <figure class="res-editorial-image wrap">
-      <img src="/images/accompagnement.jpg" alt="Patrick Noblet accompagnant une posture de yoga">
+      <img src="/images/accompagnement.jpg" alt="Patrick Noblet accompagnant une posture de yoga" loading="lazy" decoding="async" width="1600" height="1540">
     </figure>
 
     <section class="res-rebirth">
@@ -140,7 +140,7 @@ const changeStep = (direction: number) => {
       >
         <p id="res-carousel-help" class="sr-only">Utilisez les boutons précédent et suivant, ou les flèches gauche et droite du clavier, pour parcourir les cinq étapes.</p>
         <div id="res-steps-track" class="steps-carousel__track" aria-live="polite" aria-atomic="false">
-          <article
+          <div
             v-for="(step, index) in steps"
             :key="step.title"
             class="steps-card"
@@ -156,7 +156,7 @@ const changeStep = (direction: number) => {
               <p>{{ step.text }}</p>
               <blockquote v-if="step.quote">« {{ step.quote }} »</blockquote>
             </div>
-          </article>
+          </div>
         </div>
         <div class="steps-carousel__controls">
           <button type="button" aria-label="Afficher l’étape précédente" aria-controls="res-steps-track" @click="changeStep(-1)">←</button>

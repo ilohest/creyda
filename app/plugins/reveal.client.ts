@@ -17,7 +17,7 @@ export default defineNuxtPlugin((nuxtApp) => {
 
   const preparePage = () => {
     const elements = document.querySelectorAll<HTMLElement>(
-      'main h1, main h2, main h3, main .lead, main p, main blockquote, main cite, main li'
+      'main h2, main h3, main .lead, main p, main blockquote, main cite, main li'
     )
 
     elements.forEach((element, index) => {
