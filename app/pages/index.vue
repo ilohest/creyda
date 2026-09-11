@@ -75,9 +75,11 @@ useSeoMeta({ title: 'Centre de yoga intégral à Ixelles' })
     </section>
 
     <section class="visit wrap">
-      <div class="visit-copy">
+      <header class="visit-heading">
         <p class="eyebrow">Nous trouver</p>
         <h2>Un centre de proximité à Ixelles.</h2>
+      </header>
+      <div class="visit-details">
         <p><a href="https://www.google.com/maps/place/Centre+Yoga+Ixelles+:+Yoga+Bruxelles+Creyda+Sport/@50.8143634,4.3867333,17.42z/data=!4m6!3m5!1s0x47c3c4c27e6be593:0x24a3ce06f25c7f71!8m2!3d50.8143222!4d4.3885429!16s%2Fg%2F11bzx3d847?entry=ttu&amp;g_ep=EgoyMDI2MDkwOC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">106 avenue Général Médecin Derache<br>1050 Ixelles, Bruxelles</a></p>
         <p><strong>Bus</strong> 71, 72, 95, N09 — arrêt Cimetière d’Ixelles<br><strong>Tram</strong> 8, 25 — arrêt ULB</p>
         <NuxtLink to="/contact" class="text-link">Préparer votre visite <span>→</span></NuxtLink>
