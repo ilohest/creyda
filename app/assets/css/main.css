@@ -137,7 +137,7 @@ h2 { font-size: clamp(3rem, 6.2vw, 6.8rem); }
 .practice-list p { grid-column: 2; margin: 7px 0 0; max-width: 380px; color: var(--muted); font-size: .9rem; }
 
 .schedule { padding: 150px 0; display: grid; grid-template-columns: .8fr 1.2fr; gap: 10vw; }
-.schedule > div:first-child p:last-child { max-width: 420px; }
+.schedule > div:first-child > p:not(.eyebrow) { max-width: 420px; }
 .schedule-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 .schedule-cards article { min-height: 235px; padding: 30px; display: flex; flex-direction: column; background: var(--mist); }
 .schedule-cards article + article { padding-left: 30px; }
@@ -145,6 +145,7 @@ h2 { font-size: clamp(3rem, 6.2vw, 6.8rem); }
 .schedule-cards strong { display: block; margin-top: auto; font-size: clamp(1.8rem, 3vw, 3.2rem); font-weight: 400; letter-spacing: -.04em; }
 .schedule-cards span { color: var(--muted); }
 .schedule-note { max-width: 420px; margin-top: 24px; font-size: .8rem; color: var(--muted); }
+.schedule-link { margin-top: 28px; }
 
 .res-teaser { padding: clamp(70px, 10vw, 150px) max(40px, calc((100vw - 1380px)/2)); display: grid; grid-template-columns: .6fr 1.4fr; gap: 8vw; align-items: center; background: var(--green); color: var(--white); }
 .res-identity { width: fit-content; max-width: 100%; display: flex; flex-direction: column; align-items: center; text-align: center; }

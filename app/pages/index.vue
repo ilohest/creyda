@@ -115,6 +115,7 @@ useHead({
         <h2>Pratiquer au fil de la semaine.</h2>
         <p>Les cours durent au minimum 90 minutes. Ils sont ouverts aux personnes débutantes comme avancées.</p>
         <p class="schedule-note">Les séances de bien-être sont proposées sur réservation téléphonique.</p>
+        <NuxtLink to="/tarifs" class="text-link schedule-link">Voir les tarifs <span>→</span></NuxtLink>
       </div>
       <div class="schedule-cards">
         <article><p>Matin</p><strong>10h30 — 12h00</strong><span>Du mardi au vendredi</span></article>
