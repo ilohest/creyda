@@ -97,14 +97,8 @@ const daySteps = [
 
 const activeDayStep = ref<number | null>(0)
 
-function handleStepToggle(index: number, event: Event) {
-  const details = event.currentTarget as HTMLDetailsElement
-
-  if (details.open) {
-    activeDayStep.value = index
-  } else if (activeDayStep.value === index) {
-    activeDayStep.value = null
-  }
+function toggleDayStep(index: number) {
+  activeDayStep.value = activeDayStep.value === index ? null : index
 }
 </script>
 
@@ -149,24 +143,43 @@ function handleStepToggle(index: number, event: Event) {
       </header>
 
       <div class="conscious-day__steps">
-        <details
+        <div
           v-for="(step, index) in daySteps"
           :key="step.number"
-          :open="activeDayStep === index"
-          @toggle="handleStepToggle(index, $event)"
+          class="conscious-day__item"
+          :class="{ 'is-open': activeDayStep === index }"
         >
-          <summary>
-            <span>{{ step.number }}</span>
-            <h3>{{ step.title }}</h3>
-            <i aria-hidden="true">+</i>
-          </summary>
-          <div class="conscious-day__content">
-            <p v-for="paragraph in step.paragraphs" :key="paragraph">{{ paragraph }}</p>
-            <ul v-if="step.points">
-              <li v-for="point in step.points" :key="point">{{ point }}</li>
-            </ul>
+          <h3>
+            <button
+              :id="`day-step-trigger-${index}`"
+              type="button"
+              class="conscious-day__toggle"
+              :aria-expanded="activeDayStep === index"
+              :aria-controls="`day-step-panel-${index}`"
+              @click="toggleDayStep(index)"
+            >
+              <span>{{ step.number }}</span>
+              <span class="conscious-day__title">{{ step.title }}</span>
+              <i aria-hidden="true">+</i>
+            </button>
+          </h3>
+          <div
+            :id="`day-step-panel-${index}`"
+            class="conscious-day__panel"
+            role="region"
+            :aria-labelledby="`day-step-trigger-${index}`"
+            :aria-hidden="activeDayStep !== index"
+          >
+            <div>
+              <div class="conscious-day__content">
+                <p v-for="paragraph in step.paragraphs" :key="paragraph">{{ paragraph }}</p>
+                <ul v-if="step.points">
+                  <li v-for="point in step.points" :key="point">{{ point }}</li>
+                </ul>
+              </div>
+            </div>
           </div>
-        </details>
+        </div>
       </div>
     </section>
 

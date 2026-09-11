@@ -379,13 +379,16 @@ h2 { font-size: clamp(3rem, 6.2vw, 6.8rem); }
 .conscious-day__steps { min-width: 0; }
 .conscious-day__head h2 { margin: 30px 0 40px; font-size: clamp(3.4rem, 6vw, 6.8rem); }
 .conscious-day__head > p:last-child { max-width: 430px; color: var(--muted); }
-.conscious-day__steps details { margin-bottom: 14px; background: var(--mist); }
-.conscious-day__steps summary { padding: 28px 30px; display: grid; grid-template-columns: 52px 1fr 34px; gap: 18px; align-items: center; cursor: pointer; list-style: none; }
-.conscious-day__steps summary::-webkit-details-marker { display: none; }
-.conscious-day__steps summary > span { color: var(--green-ink); font-size: .75rem; letter-spacing: .14em; }
+.conscious-day__item { margin-bottom: 14px; background: var(--mist); }
 .conscious-day__steps h3 { margin: 0; font-size: clamp(1.7rem, 2.8vw, 2.8rem); }
-.conscious-day__steps summary i { width: 32px; height: 32px; display: grid; place-items: center; border: 1px solid var(--ink); border-radius: 50%; font-family: var(--body); font-size: 1rem; font-style: normal; transition: transform .3s ease, background-color .3s ease, color .3s ease; }
-.conscious-day__steps details[open] summary i { transform: rotate(45deg); background: var(--green); border-color: var(--green); color: var(--white); }
+.conscious-day__toggle { width: 100%; padding: 28px 30px; display: grid; grid-template-columns: 52px 1fr 34px; gap: 18px; align-items: center; border: 0; background: transparent; color: inherit; text-align: left; cursor: pointer; }
+.conscious-day__toggle > span:first-child { color: var(--green-ink); font-family: var(--body); font-size: .75rem; font-weight: 400; letter-spacing: .14em; }
+.conscious-day__title { font-family: var(--display); font-weight: 400; line-height: .96; letter-spacing: -.045em; }
+.conscious-day__toggle i { width: 32px; height: 32px; display: grid; place-items: center; border: 1px solid var(--ink); border-radius: 50%; font-family: var(--body); font-size: 1rem; font-style: normal; transition: transform .55s cubic-bezier(.22, 1, .36, 1), background-color .4s ease, color .4s ease; }
+.conscious-day__item.is-open .conscious-day__toggle i { transform: rotate(45deg); background: var(--green); border-color: var(--green); color: var(--white); }
+.conscious-day__panel { display: grid; grid-template-rows: 0fr; opacity: 0; transform: translateY(-6px); transition: grid-template-rows .65s cubic-bezier(.22, 1, .36, 1), opacity .4s ease, transform .55s cubic-bezier(.22, 1, .36, 1); }
+.conscious-day__panel > div { min-height: 0; overflow: hidden; }
+.conscious-day__item.is-open .conscious-day__panel { grid-template-rows: 1fr; opacity: 1; transform: translateY(0); }
 .conscious-day__content { padding: 0 84px 38px 100px; color: var(--muted); }
 .conscious-day__content ul { margin: 24px 0 0; padding: 0; list-style: none; }
 .conscious-day__content li { margin-top: 12px; padding-left: 24px; position: relative; }
@@ -663,7 +666,7 @@ h2 { font-size: clamp(3rem, 6.2vw, 6.8rem); }
   .wellbeing-quote { min-height: 520px; padding: 80px 20px; }
   .wellbeing-quote > p { margin-left: 0; }
   .conscious-day { padding: 90px 0; }
-  .conscious-day__steps summary { padding: 24px 20px; grid-template-columns: 36px 1fr 30px; gap: 10px; }
+  .conscious-day__toggle { padding: 24px 20px; grid-template-columns: 36px 1fr 30px; gap: 10px; }
   .conscious-day__content { padding: 0 20px 30px 66px; }
   .wellbeing-cta { width: 100%; margin-bottom: 80px; padding: 65px 20px; }
   .gallery-editorial { width: 100%; padding-inline: 16px; padding-bottom: 80px; }
