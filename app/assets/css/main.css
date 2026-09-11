@@ -175,7 +175,7 @@ h2 { font-size: clamp(3rem, 6.2vw, 6.8rem); }
 .footer-credit { font-family: var(--button-font); color: var(--green); }
 
 .page-intro { min-height: calc(100svh - 86px); padding: clamp(44px, 7vh, 82px) 0; display: grid; grid-template-columns: 30px minmax(0, 1.45fr) minmax(260px, .55fr); gap: clamp(22px, 3vw, 48px); align-items: center; }
-.page-intro .eyebrow { grid-column: 1; margin: 0; justify-self: start; color: var(--green); writing-mode: vertical-rl; }
+.page-intro .eyebrow { grid-column: 1; margin: 0; justify-self: start; color: var(--green); writing-mode: vertical-rl; transform: rotate(180deg); }
 .page-intro h1 { grid-column: 2; max-width: 940px; margin: 0; font-size: clamp(4.25rem, 7.6vw, 8.8rem); }
 .page-intro .lead { grid-column: 3; width: min(100%, 360px); margin: 0; justify-self: end; color: var(--muted); font-size: clamp(1rem, 1.25vw, 1.16rem); text-align: right; }
 .page-intro--without-eyebrow h1 { grid-column: 1 / 3; }
