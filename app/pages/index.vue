@@ -17,7 +17,7 @@ useSeoMeta({ title: 'Centre de yoga intégral à Ixelles' })
       <aside>
         <p>Des cours accessibles à tous,<br>au cœur d’Ixelles.</p>
         <NuxtLink to="/contact" class="text-link">Cours d’essai <span>↘</span></NuxtLink>
-        <div class="sun-mark" aria-hidden="true" />
+        <RadiantMark class="sun-mark" />
       </aside>
       <div class="opening-main">
         <h2>Quand une sagesse ancienne rencontre votre quotidien.</h2>

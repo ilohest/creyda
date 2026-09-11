@@ -111,6 +111,7 @@ const laws = [
     </section>
 
     <section class="res-manifesto wrap">
+      <RadiantMark variant="airy" class="manifesto-burst" />
       <p>« Une réconciliation avec soi-même, les autres et tout ce qui nous entoure. »</p>
       <NuxtLink to="/tarifs" class="text-link">Découvrir les tarifs <span>→</span></NuxtLink>
     </section>

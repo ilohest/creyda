@@ -30,6 +30,7 @@ const res = [
 
 <template>
   <main class="pricing-page">
+    <RadiantMark variant="dense" class="pricing-burst" />
     <PageIntro title="Choisir le rythme qui vous convient." text="Cours ponctuels, forfaits et formations : chaque formule accompagne une pratique régulière, à votre mesure." />
 
     <section class="pricing-section wrap">
