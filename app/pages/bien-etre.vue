@@ -190,8 +190,10 @@ function toggleDayStep(index: number) {
       </div>
       <div>
         <p>Les séances de bien-être sont proposées sur réservation téléphonique, selon des horaires flexibles.</p>
-        <NuxtLink to="/contact" class="button button-light">Contacter Patrick</NuxtLink>
-        <NuxtLink to="/tarifs" class="text-link wellbeing-cta__link">Voir tous les tarifs <span>→</span></NuxtLink>
+        <div class="wellbeing-cta__actions">
+          <NuxtLink to="/contact" class="button button-light">Contacter Patrick</NuxtLink>
+          <NuxtLink to="/tarifs" class="text-link wellbeing-cta__link">Voir tous les tarifs <span>→</span></NuxtLink>
+        </div>
       </div>
     </section>
   </main>
