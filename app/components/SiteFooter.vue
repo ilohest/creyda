@@ -3,7 +3,6 @@
     <div class="footer-head">
       <NuxtLink to="/" class="footer-wordmark" aria-label="Creyda Yoga — accueil">
         <strong>CREYDA</strong>
-        <span>Yoga</span>
       </NuxtLink>
       <p>Centre de relaxation et d’étude du yoga, au cœur d’Ixelles.</p>
     </div>
@@ -35,8 +34,8 @@
 
     <div class="footer-bottom">
       <span>© {{ new Date().getFullYear() }} CREYDA ASBL</span>
-      <span>Yoga intégral · Bruxelles</span>
       <NuxtLink to="/politique-de-confidentialite">Politique de confidentialité</NuxtLink>
+      <a class="footer-credit" href="https://isaure-lohest.com/" target="_blank" rel="noopener noreferrer">WEBSITE BY ISAURE</a>
     </div>
   </footer>
 </template>
