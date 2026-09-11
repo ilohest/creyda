@@ -57,7 +57,7 @@ useSeoMeta({ title: 'Centre de yoga intégral à Ixelles' })
         <p class="eyebrow">Rythme · Équilibre · Synchronicité</p>
       </div>
       <div>
-        <h2><span class="no-break">« Toute</span> évolution commence par soi. »</h2>
+        <h2><span class="no-break">« Toute</span> évolution commence par <span class="no-break">soi.&nbsp;»</span></h2>
         <p>Une méthode de développement personnel créée par Patrick Noblet, nourrie par le yoga, la méditation, le qi gong et un parcours de vie singulier.</p>
         <NuxtLink to="/methode-res" class="text-link">Explorer la méthode <span>→</span></NuxtLink>
       </div>

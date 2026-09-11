@@ -141,8 +141,9 @@ h2 { font-size: clamp(3rem, 6.2vw, 6.8rem); }
 .schedule-note { max-width: 420px; margin-top: 24px; font-size: .8rem; color: var(--muted); }
 
 .res-teaser { padding: clamp(70px, 10vw, 150px) max(40px, calc((100vw - 1380px)/2)); display: grid; grid-template-columns: .6fr 1.4fr; gap: 8vw; align-items: center; background: var(--green); color: var(--white); }
+.res-identity { width: fit-content; max-width: 100%; display: flex; flex-direction: column; align-items: center; text-align: center; }
 .res-mark { font-family: var(--display); font-size: clamp(4rem, 9vw, 9rem); letter-spacing: -.055em; }
-.res-identity .eyebrow { max-width: 320px; margin: 30px 0 0; line-height: 1.65; }
+.res-identity .eyebrow { margin: 6px 0 0; line-height: 1.35; white-space: nowrap; }
 .res-teaser h2 { margin-bottom: 28px; }
 .res-teaser p:not(.eyebrow) { max-width: 680px; color: rgba(255,255,255,.8); }
 .res-teaser .text-link { display: inline-flex; margin-top: 26px; }
@@ -485,6 +486,7 @@ h2 { font-size: clamp(3rem, 6.2vw, 6.8rem); }
   .schedule-cards article + article { padding-left: 30px; }
   .schedule-note { grid-column: auto; }
   .res-teaser { padding-inline: 20px; }
+  .res-identity .eyebrow { white-space: normal; }
   .visit { padding: 85px 0 55px; }
   .site-footer { padding: 70px 20px 25px; }
   .footer-head { padding-bottom: 45px; grid-template-columns: 1fr; gap: 38px; }
