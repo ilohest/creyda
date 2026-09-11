@@ -1,7 +1,21 @@
 <script setup lang="ts">
 const route = useRoute()
 const open = ref(false)
+const scrolled = ref(false)
 watch(() => route.fullPath, () => { open.value = false })
+
+const updateScrollState = () => {
+  scrolled.value = window.scrollY > 8
+}
+
+onMounted(() => {
+  updateScrollState()
+  window.addEventListener('scroll', updateScrollState, { passive: true })
+})
+
+onBeforeUnmount(() => {
+  window.removeEventListener('scroll', updateScrollState)
+})
 
 const links = [
   { to: '/', label: 'Accueil' },
@@ -15,7 +29,7 @@ const links = [
 </script>
 
 <template>
-  <header class="site-header">
+  <header class="site-header" :class="{ 'is-scrolled': scrolled, 'menu-open': open }">
     <NuxtLink to="/" class="brand" aria-label="Creyda Yoga — accueil">
       <img src="/images/logo-creyda.png" alt="" width="48" height="48">
       <span><strong>CREYDA</strong><small>Yoga intégral · Bruxelles</small></span>

@@ -101,9 +101,9 @@ function paint(haze: Haze) {
   if (!context) return
   const [r, g, b] = haze.color
   const gradient = context.createRadialGradient(haze.x, haze.y, 0, haze.x, haze.y, haze.radius)
-  gradient.addColorStop(0, `rgba(${r}, ${g}, ${b}, .16)`)
-  gradient.addColorStop(.42, `rgba(${r}, ${g}, ${b}, .09)`)
-  gradient.addColorStop(.78, `rgba(${r}, ${g}, ${b}, .025)`)
+  gradient.addColorStop(0, `rgba(${r}, ${g}, ${b}, .28)`)
+  gradient.addColorStop(.42, `rgba(${r}, ${g}, ${b}, .16)`)
+  gradient.addColorStop(.78, `rgba(${r}, ${g}, ${b}, .05)`)
   gradient.addColorStop(1, `rgba(${r}, ${g}, ${b}, 0)`)
   context.fillStyle = gradient
   context.beginPath()
@@ -166,8 +166,8 @@ onBeforeUnmount(() => {
   position: absolute;
   inset: -10%;
   z-index: 0;
-  opacity: .72;
-  filter: blur(42px) saturate(.78);
+  opacity: .92;
+  filter: blur(34px) saturate(.92);
   pointer-events: none;
   transform: translateZ(0);
 }
