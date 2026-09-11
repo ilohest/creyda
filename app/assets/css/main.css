@@ -258,10 +258,10 @@ h2 { font-size: clamp(3rem, 6.2vw, 6.8rem); }
 .res-section-heading h2 { margin: 0; max-width: 1000px; }
 .res-training__intro { max-width: 470px; margin: 0 0 8px; justify-self: end; color: var(--muted); font-size: 1.05rem; text-align: right; }
 .res-training__intro p { margin: 0; }
-.res-years { display: grid; grid-template-columns: 1fr 1fr; }
+.res-years { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(18px, 2vw, 30px); }
 .res-training__heading + .res-years { margin-top: 75px; }
-.res-years article { min-height: 470px; padding: 45px 55px 50px 0; border-top: 1px solid var(--ink); }
-.res-years article + article { padding-left: 55px; border-left: 1px solid var(--line); }
+.res-years article { min-height: 470px; padding: clamp(38px, 4vw, 55px); background: var(--mist); }
+.res-years article + article { padding-left: clamp(38px, 4vw, 55px); }
 .res-years article > span { color: var(--green); font-size: .75rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; }
 .res-program__grid article > span { color: var(--green-ink); font-size: .75rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; }
 .res-years h3 { margin: 90px 0 26px; font-size: clamp(2rem, 3.5vw, 3.8rem); }
@@ -617,8 +617,9 @@ h2 { font-size: clamp(3rem, 6.2vw, 6.8rem); }
   .res-training__heading { grid-template-columns: 1fr; gap: 32px; }
   .res-training__intro { max-width: 620px; justify-self: start; text-align: left; }
   .res-years, .res-program__grid { grid-template-columns: 1fr; }
-  .res-years article { min-height: auto; padding: 34px 0 45px; }
-  .res-years article + article { padding-left: 0; border-left: 0; }
+  .res-years { gap: 16px; }
+  .res-years article { min-height: auto; padding: 34px 26px 45px; }
+  .res-years article + article { padding-left: 26px; }
   .res-years h3 { margin-top: 50px; }
   .res-program__grid { gap: 44px; }
   .res-program__grid article, .res-program__grid article:nth-child(even) { padding: 0; }
