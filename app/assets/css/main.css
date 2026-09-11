@@ -174,6 +174,7 @@ h2 { font-size: clamp(3rem, 6.2vw, 6.8rem); }
 .pricing-note p { margin: 0; max-width: 740px; }
 .pricing-note .button { margin: 0; white-space: nowrap; }
 .contact-grid { padding: 90px 0; display: grid; grid-template-columns: 1fr 1fr; gap: 0; }
+.contact-page .page-intro { border-bottom: 0; }
 .contact-primary { min-height: 500px; padding: 60px; display: flex; flex-direction: column; background: var(--green); color: var(--white); }
 .contact-primary > a { margin: 4px 0; font-size: clamp(1.6rem, 3vw, 3rem); letter-spacing: -.04em; }
 .contact-primary > p:last-child { margin-top: auto; color: rgba(255,255,255,.75); }
