@@ -13,32 +13,32 @@ const mapUrl = 'https://www.openstreetmap.org/export/embed.html?bbox=4.3778%2C50
     />
 
     <section class="contact-grid wrap">
-      <div class="contact-primary">
-        <RadiantMark variant="dense" tone="light" class="contact-burst" />
-        <p class="eyebrow light">Patrick Noblet</p>
+      <article class="contact-card contact-card--primary">
+        <p class="eyebrow">Patrick Noblet</p>
         <a href="tel:+32474971657">0474 97 16 57</a>
         <a href="mailto:contact@creyda-yoga.be">contact@creyda-yoga.be</a>
         <div class="contact-primary__note">
           <p>Privilégiez le téléphone : Patrick ne peut pas toujours répondre rapidement aux messages écrits.</p>
           <p>S’il est indisponible, réessayez plus tard ou laissez-lui le temps de vous rappeler. Les appels en numéro masqué ne peuvent pas être rappelés.</p>
         </div>
-      </div>
+      </article>
 
-      <div class="contact-details">
-        <article>
+      <article class="contact-card">
+        <div>
           <span>Horaires du centre</span>
           <p>Du mardi au vendredi<br><strong>10h30 — 12h00</strong></p>
           <p>Du dimanche au vendredi<br><strong>17h30 — 19h00</strong></p>
-        </article>
-        <article>
+        </div>
+        <div class="contact-card__secondary">
           <span>Séances de bien-être</span>
           <p>Horaires ouverts et flexibles, uniquement sur réservation par téléphone.</p>
-        </article>
-        <article>
-          <span>Administration</span>
-          <p>Laurent Locqueneux<br><a href="tel:+32474985159">0474 98 51 59</a></p>
-        </article>
-      </div>
+        </div>
+      </article>
+
+      <article class="contact-card">
+        <span>Administration</span>
+        <p>Laurent Locqueneux<br><a href="tel:+32474985159">0474 98 51 59</a></p>
+      </article>
     </section>
 
     <section class="contact-place wrap">

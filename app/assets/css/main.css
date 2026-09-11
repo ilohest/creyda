@@ -71,7 +71,7 @@ h2 { font-size: clamp(3rem, 6.2vw, 6.8rem); }
 .wrap { width: min(1380px, calc(100% - 80px)); margin-inline: auto; }
 .eyebrow { font-size: .7rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; }
 .eyebrow.light { color: var(--mint); }
-.eyebrow, .hero-kicker, .schedule-cards article p, .footer-label, .res-signature, .res-years article > span, .res-program__grid article > span, .contact-details span, .contact-place__facts span, .wellbeing-facts span, .gallery-editorial__head, .gallery-lightbox figcaption { font-family: var(--button-font); }
+.eyebrow, .hero-kicker, .schedule-cards article p, .footer-label, .res-signature, .res-years article > span, .res-program__grid article > span, .contact-card span, .contact-place__facts span, .wellbeing-facts span, .gallery-editorial__head, .gallery-lightbox figcaption { font-family: var(--button-font); }
 .no-break { white-space: nowrap; }
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
 
@@ -290,18 +290,16 @@ h2 { font-size: clamp(3rem, 6.2vw, 6.8rem); }
 .pricing-conditions h2 { margin: 26px 0 0; font-size: clamp(2.8rem, 5vw, 5.7rem); }
 .pricing-conditions > div:last-child { align-self: end; }
 .pricing-conditions > div:last-child p { max-width: 620px; }
-.contact-grid { padding: 90px 0 120px; display: grid; grid-template-columns: 1fr 1fr; gap: 0; }
-.contact-primary { min-height: 610px; padding: 60px; display: flex; flex-direction: column; position: relative; overflow: hidden; background: var(--green); color: var(--white); }
-.contact-primary > :not(.contact-burst) { position: relative; z-index: 1; }
-.contact-burst { width: 280px; position: absolute; right: -95px; bottom: -80px; opacity: .18; }
-.contact-primary > a { margin: 4px 0; font-size: clamp(1.6rem, 3vw, 3rem); letter-spacing: -.04em; }
-.contact-primary__note { max-width: 540px; margin-top: auto; color: rgba(255,255,255,.76); font-size: .86rem; }
+.contact-grid { padding: 90px 0 120px; display: grid; grid-template-columns: 1.25fr 1fr .8fr; gap: clamp(14px, 1.6vw, 24px); align-items: stretch; }
+.contact-card { min-height: 420px; padding: clamp(30px, 3vw, 48px); display: flex; flex-direction: column; background: var(--mist); color: var(--ink); }
+.contact-card--primary { min-height: 470px; }
+.contact-card--primary > a { margin: 4px 0; font-size: clamp(1.35rem, 2.25vw, 2.45rem); letter-spacing: -.04em; overflow-wrap: anywhere; }
+.contact-primary__note { max-width: 500px; margin-top: auto; color: var(--muted); font-size: .86rem; }
 .contact-primary__note p { margin: 8px 0 0; }
-.contact-details { padding: 36px; display: grid; gap: 16px; background: var(--mist); }
-.contact-details article { padding: 32px; background: var(--white); }
-.contact-details span, .contact-place__facts span { color: var(--green); font-size: .68rem; text-transform: uppercase; letter-spacing: .14em; }
-.contact-details p { margin-bottom: 0; }
-.contact-details a { font-size: 1.25rem; }
+.contact-card span, .contact-place__facts span { color: var(--green); font-size: .68rem; text-transform: uppercase; letter-spacing: .14em; }
+.contact-card p { margin-bottom: 0; }
+.contact-card > p a { font-size: 1.25rem; }
+.contact-card__secondary { margin-top: auto; padding-top: 48px; }
 .contact-place { padding: 0 0 130px; display: grid; grid-template-columns: .82fr 1.18fr; align-items: stretch; }
 .contact-place__copy { padding: 75px 7vw 75px 0; display: flex; flex-direction: column; align-items: flex-start; }
 .contact-place h2 { margin: 28px 0 55px; font-size: clamp(3.2rem, 5.7vw, 6.5rem); }
@@ -504,7 +502,9 @@ h2 { font-size: clamp(3rem, 6.2vw, 6.8rem); }
   .pillar-grid article { min-height: 240px; }
   .ticket-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .pricing-heading, .pricing-conditions { grid-template-columns: 1fr; gap: 40px; }
-  .contact-grid, .contact-place, .contact-support { grid-template-columns: 1fr; }
+  .contact-place, .contact-support { grid-template-columns: 1fr; }
+  .contact-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .contact-card--primary { grid-column: 1 / -1; min-height: 420px; }
   .contact-place__copy { padding: 0 0 70px; }
   .contact-place .button { margin-top: 42px; }
   .contact-image img { min-height: 560px; }
@@ -583,10 +583,10 @@ h2 { font-size: clamp(3rem, 6.2vw, 6.8rem); }
   .price-ticket { min-height: 300px; padding: 26px; transform: none; }
   .price-ticket:nth-child(even) { transform: none; }
   .pricing-conditions { width: 100%; margin-bottom: 80px; padding: 55px 20px; }
-  .contact-primary, .contact-details { padding: 38px 22px; }
-  .contact-burst { width: 220px; }
-  .contact-primary { min-height: 590px; }
-  .contact-details article { padding: 28px 22px; }
+  .contact-grid { grid-template-columns: 1fr; gap: 14px; }
+  .contact-card { min-height: 300px; padding: 38px 22px; }
+  .contact-card--primary { grid-column: auto; min-height: 470px; }
+  .contact-card__secondary { margin-top: 48px; padding-top: 0; }
   .contact-place { width: 100%; padding-bottom: 85px; }
   .contact-place__copy { width: min(100% - 32px, 1380px); margin: 0 auto; }
   .contact-image { width: 100%; }
