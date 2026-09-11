@@ -73,7 +73,6 @@ onBeforeUnmount(() => window.removeEventListener('keydown', handleKeydown))
     <section class="gallery-closing wrap">
       <RadiantMark variant="airy" class="gallery-closing__mark" />
       <div>
-        <p class="eyebrow light">Venir pratiquer</p>
         <h2>Et si la prochaine image était la vôtre&nbsp;?</h2>
         <NuxtLink class="button gallery-closing__button" to="/contact">Prendre contact</NuxtLink>
       </div>
