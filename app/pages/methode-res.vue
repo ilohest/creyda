@@ -121,7 +121,7 @@ const changeStep = (direction: number) => {
       <header class="steps-heading">
         <p class="eyebrow">Le parcours</p>
         <div class="steps-heading__row">
-          <h2>Un changement en cinq étapes.</h2>
+          <h2 id="res-steps-title">Un changement en cinq étapes.</h2>
           <p class="steps-intro">Ouverte à tous et étalée sur un minimum de 200 heures, cette méthode de transformation suit les cinq animaux du kung-fu. L’équilibre retrouvé est l’aboutissement d’un travail personnel.</p>
         </div>
       </header>
@@ -129,18 +129,23 @@ const changeStep = (direction: number) => {
         class="steps-carousel"
         role="region"
         aria-roledescription="carrousel"
-        aria-label="Les cinq étapes de la méthode R.E.S."
+        aria-labelledby="res-steps-title"
+        aria-describedby="res-carousel-help"
         tabindex="0"
         @keydown.left.prevent="changeStep(-1)"
         @keydown.right.prevent="changeStep(1)"
       >
-        <ol class="steps-carousel__track">
-          <li
+        <p id="res-carousel-help" class="sr-only">Utilisez les boutons précédent et suivant, ou les flèches gauche et droite du clavier, pour parcourir les cinq étapes.</p>
+        <div id="res-steps-track" class="steps-carousel__track" aria-live="polite" aria-atomic="false">
+          <article
             v-for="(step, index) in steps"
             :key="step.title"
             class="steps-card"
             :class="stepClass(index)"
             :aria-hidden="index !== activeStep"
+            role="group"
+            aria-roledescription="étape"
+            :aria-label="`${index + 1} sur ${steps.length} : ${step.title}`"
           >
             <span>0{{ index + 1 }}</span>
             <div>
@@ -148,12 +153,12 @@ const changeStep = (direction: number) => {
               <p>{{ step.text }}</p>
               <blockquote v-if="step.quote">« {{ step.quote }} »</blockquote>
             </div>
-          </li>
-        </ol>
+          </article>
+        </div>
         <div class="steps-carousel__controls">
-          <button type="button" aria-label="Afficher l’étape précédente" @click="changeStep(-1)">←</button>
-          <p aria-live="polite"><span>0{{ activeStep + 1 }}</span> / 05</p>
-          <button type="button" aria-label="Afficher l’étape suivante" @click="changeStep(1)">→</button>
+          <button type="button" aria-label="Afficher l’étape précédente" aria-controls="res-steps-track" @click="changeStep(-1)">←</button>
+          <p aria-hidden="true"><span>0{{ activeStep + 1 }}</span> / 05</p>
+          <button type="button" aria-label="Afficher l’étape suivante" aria-controls="res-steps-track" @click="changeStep(1)">→</button>
         </div>
       </div>
       <p class="res-signature">Patrick Noblet, auteur de la méthode R.E.S.</p>

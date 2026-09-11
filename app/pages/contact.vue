@@ -48,7 +48,7 @@ const mapUrl = 'https://www.openstreetmap.org/export/embed.html?bbox=4.3778%2C50
         <div class="contact-place__facts">
           <div>
             <span>Adresse</span>
-            <p><a :href="directionsUrl" target="_blank" rel="noopener noreferrer">106 avenue Général Médecin Derache<br>1050 Ixelles, Bruxelles</a></p>
+            <p><a :href="directionsUrl" target="_blank" rel="noopener noreferrer">106 avenue Général Médecin Derache<br>1050 Ixelles, Bruxelles<span class="sr-only"> (nouvel onglet)</span></a></p>
           </div>
           <div>
             <span>Transports</span>
@@ -59,7 +59,7 @@ const mapUrl = 'https://www.openstreetmap.org/export/embed.html?bbox=4.3778%2C50
             <p>Une tenue souple et confortable. Le centre dispose d’un vestiaire.</p>
           </div>
         </div>
-        <a class="button" :href="directionsUrl" target="_blank" rel="noopener noreferrer">Voir l’itinéraire</a>
+        <a class="button" :href="directionsUrl" target="_blank" rel="noopener noreferrer">Voir l’itinéraire<span class="sr-only"> (nouvel onglet)</span></a>
       </div>
       <div class="contact-image">
         <img src="/images/centre-creyda.jpg" alt="Entrée du centre Creyda à Ixelles">
@@ -77,8 +77,8 @@ const mapUrl = 'https://www.openstreetmap.org/export/embed.html?bbox=4.3778%2C50
       <div class="contact-map__card">
         <p class="eyebrow light">50.8143° N · 4.3860° E</p>
         <h2 id="contact-map-title">CREYDA<br>Ixelles</h2>
-        <p><a :href="directionsUrl" target="_blank" rel="noopener noreferrer">106 avenue Général Médecin Derache<br>1050 Bruxelles</a></p>
-        <a :href="directionsUrl" target="_blank" rel="noopener noreferrer">Ouvrir l’itinéraire <span>→</span></a>
+        <p><a :href="directionsUrl" target="_blank" rel="noopener noreferrer">106 avenue Général Médecin Derache<br>1050 Bruxelles<span class="sr-only"> (nouvel onglet)</span></a></p>
+        <a :href="directionsUrl" target="_blank" rel="noopener noreferrer">Ouvrir l’itinéraire <span aria-hidden="true">→</span><span class="sr-only"> (nouvel onglet)</span></a>
       </div>
     </section>
 

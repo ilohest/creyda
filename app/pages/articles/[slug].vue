@@ -11,6 +11,9 @@ if (!article.value) {
 
 const previousArticle = computed(() => articleIndex.value > 0 ? articles[articleIndex.value - 1] : null)
 const nextArticle = computed(() => articleIndex.value < articles.length - 1 ? articles[articleIndex.value + 1] : null)
+const accessibleContent = computed(() => article.value.content
+  .replaceAll('<h4>', '<h2>')
+  .replaceAll('</h4>', '</h2>'))
 
 useSeoMeta({
   title: () => article.value.title,
@@ -34,7 +37,7 @@ useSeoMeta({
       <img :src="article.image" :alt="article.imageAlt" width="1600" height="1000">
     </figure>
 
-    <article class="article-body wrap" v-html="article.content" />
+    <article class="article-body wrap" v-html="accessibleContent" />
 
     <section v-if="article.gallery?.length" class="article-plate-gallery wrap" aria-label="Planches du Mutus Liber">
       <figure v-for="(image, index) in article.gallery" :key="image">
@@ -47,7 +50,7 @@ useSeoMeta({
       <p class="eyebrow">Document complet</p>
       <h2>Lire le mémoire.</h2>
       <p>Le travail intégral est disponible au format PDF.</p>
-      <a class="button button-light" :href="article.download" target="_blank" rel="noopener noreferrer">Ouvrir le PDF</a>
+      <a class="button button-light" :href="article.download" target="_blank" rel="noopener noreferrer">Ouvrir le PDF<span class="sr-only"> (nouvel onglet)</span></a>
     </section>
 
     <nav class="article-pagination wrap" aria-label="Navigation entre les articles">

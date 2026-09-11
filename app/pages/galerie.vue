@@ -21,9 +21,20 @@ const photos = [
 
 const activeIndex = ref<number | null>(null)
 const activePhoto = computed(() => activeIndex.value === null ? null : photos[activeIndex.value])
+const lightbox = ref<HTMLElement | null>(null)
+const closeButton = ref<HTMLButtonElement | null>(null)
+let opener: HTMLElement | null = null
+
+async function openGallery(index: number, event: MouseEvent) {
+  opener = event.currentTarget as HTMLElement
+  activeIndex.value = index
+  await nextTick()
+  closeButton.value?.focus()
+}
 
 function closeGallery() {
   activeIndex.value = null
+  nextTick(() => opener?.focus())
 }
 
 function showPrevious() {
@@ -36,9 +47,32 @@ function showNext() {
 
 function handleKeydown(event: KeyboardEvent) {
   if (activeIndex.value === null) return
-  if (event.key === 'Escape') closeGallery()
-  if (event.key === 'ArrowLeft') showPrevious()
-  if (event.key === 'ArrowRight') showNext()
+  if (event.key === 'Escape') {
+    event.preventDefault()
+    closeGallery()
+  }
+  if (event.key === 'ArrowLeft') {
+    event.preventDefault()
+    showPrevious()
+  }
+  if (event.key === 'ArrowRight') {
+    event.preventDefault()
+    showNext()
+  }
+  if (event.key !== 'Tab' || !lightbox.value) return
+
+  const controls = [...lightbox.value.querySelectorAll<HTMLElement>('button')]
+  const first = controls[0]
+  const last = controls[controls.length - 1]
+  if (!first || !last) return
+
+  if (event.shiftKey && document.activeElement === first) {
+    event.preventDefault()
+    last.focus()
+  } else if (!event.shiftKey && document.activeElement === last) {
+    event.preventDefault()
+    first.focus()
+  }
 }
 
 onMounted(() => window.addEventListener('keydown', handleKeydown))
@@ -61,7 +95,7 @@ onBeforeUnmount(() => window.removeEventListener('keydown', handleKeydown))
 
       <div class="gallery-grid">
         <figure v-for="(photo, index) in photos" :key="photo.src" class="gallery-item" :class="`gallery-item--${photo.shape}`">
-          <button type="button" :aria-label="`Agrandir l’image : ${photo.caption}`" @click="activeIndex = index">
+          <button type="button" aria-haspopup="dialog" :aria-label="`Agrandir l’image : ${photo.caption}`" @click="openGallery(index, $event)">
             <img :src="photo.src" :alt="photo.alt" :loading="index < 2 ? 'eager' : 'lazy'" width="1920" height="1920">
             <span aria-hidden="true">+</span>
           </button>
@@ -80,12 +114,13 @@ onBeforeUnmount(() => window.removeEventListener('keydown', handleKeydown))
 
     <Teleport to="body">
       <Transition name="gallery-lightbox">
-        <div v-if="activePhoto" class="gallery-lightbox" role="dialog" aria-modal="true" :aria-label="activePhoto.caption" @click.self="closeGallery">
-          <button class="gallery-lightbox__close" type="button" aria-label="Fermer" @click="closeGallery">Fermer <span>×</span></button>
+        <div v-if="activePhoto" ref="lightbox" class="gallery-lightbox" role="dialog" aria-modal="true" aria-labelledby="gallery-dialog-title" aria-describedby="gallery-dialog-help" @click.self="closeGallery">
+          <p id="gallery-dialog-help" class="sr-only">Utilisez les boutons précédent et suivant, les flèches du clavier, ou Échap pour fermer.</p>
+          <button ref="closeButton" class="gallery-lightbox__close" type="button" aria-label="Fermer la galerie" @click="closeGallery">Fermer <span aria-hidden="true">×</span></button>
           <button class="gallery-lightbox__nav gallery-lightbox__nav--previous" type="button" aria-label="Image précédente" @click="showPrevious">←</button>
           <figure>
             <img :src="activePhoto.src" :alt="activePhoto.alt">
-            <figcaption>{{ activePhoto.caption }}</figcaption>
+            <figcaption id="gallery-dialog-title">{{ activePhoto.caption }}</figcaption>
           </figure>
           <button class="gallery-lightbox__nav gallery-lightbox__nav--next" type="button" aria-label="Image suivante" @click="showNext">→</button>
         </div>
