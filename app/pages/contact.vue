@@ -10,6 +10,7 @@ const mapUrl = 'https://www.openstreetmap.org/export/embed.html?bbox=4.3778%2C50
 <template>
   <main class="contact-page">
     <PageIntro
+      eyebrow="Nous joindre"
       title="Faisons connaissance."
       text="Pour une première séance, une formation ou une question, contactez directement Patrick Noblet."
     />
