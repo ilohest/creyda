@@ -292,7 +292,7 @@ h2 { font-size: clamp(3rem, 6.2vw, 6.8rem); }
 .res-philosophy li::before { content: "→"; position: absolute; left: 0; color: var(--green); }
 .res-practical { margin-bottom: 110px; padding: 90px; display: grid; grid-template-columns: .8fr 1.2fr; gap: 10vw; background: var(--green); color: var(--white); }
 .res-practical h2 { margin: 32px 0 0; font-size: clamp(3rem, 5.5vw, 6rem); }
-.res-practical__items p { padding: 0 0 24px; border-bottom: 1px solid rgba(255,255,255,.3); color: rgba(255,255,255,.9); }
+.res-practical__items p { margin: 0 0 26px; color: rgba(255,255,255,.9); }
 .res-practical .button-light { background: var(--white); border-color: var(--white); color: var(--green); }
 .pricing-page { position: relative; overflow: hidden; }
 .pricing-page .page-intro { position: relative; z-index: 1; }
