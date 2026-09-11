@@ -95,6 +95,18 @@ const daySteps = [
     ]
   }
 ]
+
+const activeDayStep = ref<number | null>(0)
+
+function handleStepToggle(index: number, event: Event) {
+  const details = event.currentTarget as HTMLDetailsElement
+
+  if (details.open) {
+    activeDayStep.value = index
+  } else if (activeDayStep.value === index) {
+    activeDayStep.value = null
+  }
+}
 </script>
 
 <template>
@@ -138,7 +150,12 @@ const daySteps = [
       </header>
 
       <div class="conscious-day__steps">
-        <details v-for="(step, index) in daySteps" :key="step.number" :open="index === 0">
+        <details
+          v-for="(step, index) in daySteps"
+          :key="step.number"
+          :open="activeDayStep === index"
+          @toggle="handleStepToggle(index, $event)"
+        >
           <summary>
             <span>{{ step.number }}</span>
             <h3>{{ step.title }}</h3>
