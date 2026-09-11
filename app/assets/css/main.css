@@ -122,8 +122,9 @@ h2 { font-size: clamp(3rem, 6.2vw, 6.8rem); }
 .opening-gallery figure:hover img { transform: scale(1.025); filter: grayscale(.82) contrast(1.04); }
 .opening-statement { max-width: 1050px; margin: 70px 0 0; font-family: var(--display); font-size: clamp(2rem, 4.3vw, 4.7rem); line-height: 1.05; letter-spacing: -.04em; }
 
-.practice-band { margin: 0 max(40px, calc((100vw - 1380px)/2)); display: grid; grid-template-columns: 1.08fr .92fr; align-items: center; background: var(--mist); }
-.practice-image img { width: 100%; height: min(76svh, 720px); object-fit: cover; object-position: center 44%; filter: grayscale(1) contrast(1.08); }
+.practice-band { margin: 0 max(40px, calc((100vw - 1380px)/2)); display: grid; grid-template-columns: 1.08fr .92fr; align-items: stretch; background: var(--mist); }
+.practice-image { min-height: min(76svh, 720px); }
+.practice-image img { display: block; width: 100%; height: 100%; min-height: 100%; object-fit: cover; object-position: center 44%; filter: grayscale(1) contrast(1.08); }
 .practice-copy { padding: clamp(38px, 4vw, 64px); }
 .practice-copy h2 { margin: 0 0 42px; font-size: clamp(2.6rem, 4.4vw, 5rem); }
 .practice-list > div { display: grid; grid-template-columns: 44px 1fr; border-top: 1px solid var(--line); padding: 24px 0; }
@@ -494,7 +495,8 @@ h2 { font-size: clamp(3rem, 6.2vw, 6.8rem); }
   .sun-mark { width: 180px; margin: 55px 0; }
   .opening-main h2 { margin-bottom: 45px; }
   .practice-band, .res-photo { margin-inline: 24px; grid-template-columns: 1fr; }
-  .practice-image img { max-height: 72vh; }
+  .practice-image { min-height: 0; }
+  .practice-image img { height: min(72vh, 620px); min-height: 0; }
   .schedule, .visit { padding: 100px 0; }
   .schedule, .visit, .split-copy, .res-story, .res-rebirth__grid, .res-section-heading, .res-philosophy, .res-practical, .wellbeing-opening, .conscious-day, .wellbeing-cta { grid-template-columns: 1fr; gap: 50px; }
   .res-story header { position: static; }
