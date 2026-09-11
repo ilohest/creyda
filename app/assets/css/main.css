@@ -321,6 +321,19 @@ h2 { font-size: clamp(3rem, 6.2vw, 6.8rem); }
 .price-ticket li + li { margin-top: 5px; }
 .price-ticket li::before { content: "— "; }
 .section-link { display: block; margin-top: 42px; }
+.pricing-philosophy { padding: 90px 0 130px; }
+.pricing-philosophy__heading { margin-bottom: 60px; display: grid; grid-template-columns: .75fr 1.25fr; gap: 8vw; align-items: end; }
+.pricing-philosophy__heading .eyebrow { margin: 0; color: var(--green-ink); }
+.pricing-philosophy__heading h2 { max-width: 900px; margin: 0; font-size: clamp(2.8rem, 5vw, 5.7rem); }
+.pricing-philosophy__cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; align-items: stretch; }
+.pricing-philosophy__cards article { padding: clamp(32px, 4vw, 58px); background: var(--mist); }
+.pricing-philosophy__cards h3 { margin: 0 0 32px; font-size: clamp(2rem, 3.2vw, 3.5rem); }
+.pricing-philosophy__cards p { max-width: 620px; color: var(--muted); }
+.pricing-philosophy__cards ul { margin: 32px 0 0; padding-left: 1.2em; }
+.pricing-philosophy__cards li { padding-left: .35em; }
+.pricing-philosophy__cards li + li { margin-top: 18px; }
+.pricing-philosophy__cards li::marker { color: var(--green); }
+.pricing-philosophy__cards cite { font-style: italic; }
 .pricing-conditions { margin-bottom: 110px; padding: 80px; display: grid; grid-template-columns: 1fr 1fr; gap: 10vw; background: var(--mint); }
 .pricing-conditions h2 { margin: 26px 0 0; font-size: clamp(2.8rem, 5vw, 5.7rem); }
 .pricing-conditions > div:last-child { align-self: end; }
@@ -572,7 +585,8 @@ h2 { font-size: clamp(3rem, 6.2vw, 6.8rem); }
   .pillar-grid article + article { padding-left: clamp(28px, 3.2vw, 44px); }
   .pillar-grid article { min-height: 240px; }
   .ticket-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .pricing-heading, .pricing-conditions { grid-template-columns: 1fr; gap: 40px; }
+  .pricing-heading, .pricing-philosophy__heading, .pricing-conditions { grid-template-columns: 1fr; gap: 40px; }
+  .pricing-philosophy__cards { grid-template-columns: 1fr; }
   .contact-place, .contact-support { grid-template-columns: 1fr; }
   .contact-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .contact-card--primary { grid-column: 1 / -1; min-height: 420px; }
@@ -666,6 +680,10 @@ h2 { font-size: clamp(3rem, 6.2vw, 6.8rem); }
   .ticket-grid { grid-template-columns: 1fr; gap: 20px; }
   .price-ticket { min-height: 300px; padding: 26px; transform: none; }
   .price-ticket:nth-child(even) { transform: none; }
+  .pricing-philosophy { padding: 70px 0 90px; }
+  .pricing-philosophy__heading { margin-bottom: 45px; }
+  .pricing-philosophy__cards { gap: 16px; }
+  .pricing-philosophy__cards article { padding: 34px 24px 42px; }
   .pricing-conditions { width: 100%; margin-bottom: 80px; padding: 55px 20px; }
   .contact-grid { grid-template-columns: 1fr; gap: 14px; }
   .contact-card { min-height: 300px; padding: 38px 22px; }

@@ -93,6 +93,39 @@ const res = [
       <NuxtLink to="/methode-res" class="text-link section-link">Découvrir la méthode R.E.S. <span>→</span></NuxtLink>
     </section>
 
+    <section class="pricing-philosophy wrap" aria-labelledby="pricing-philosophy-title">
+      <header class="pricing-philosophy__heading">
+        <p class="eyebrow">La philosophie du centre</p>
+        <h2 id="pricing-philosophy-title">Pratiquer dans un cadre attentif.</h2>
+      </header>
+
+      <div class="pricing-philosophy__cards">
+        <article>
+          <h3>Convivialité</h3>
+          <p>Ce terme indique que vous trouverez dans notre centre de bien-être et de relaxation une ambiance chaleureuse, à tous les niveaux. Dans les faits, cela se traduit par :</p>
+          <ul>
+            <li>Le partage de points de vue, d’expériences et de sensations.</li>
+            <li>Un suivi téléphonique : l’enseignant se tient toujours à votre écoute pour ce qui pourrait concerner vos questions ou vos préoccupations. Son rôle sera alors de trouver, avec vous, une réponse adéquate et de vous rassurer. Les problèmes attendent que nous perdions pied pour s’imposer à nous et nous étouffer.</li>
+            <li>Chaque membre reçoit également la revue <cite>Les chemins du Yoga</cite>, diffusée par la Fédération Belge d’Hébertisme et de Yoga.</li>
+            <li>Le centre fonctionne six jours sur sept, toute l’année. Dès lors qu’un membre s’est acquitté de sa cotisation mensuelle, il a la possibilité de rattraper les cours manqués le mois suivant.</li>
+          </ul>
+        </article>
+
+        <article>
+          <h3>Obligations</h3>
+          <p>Les seules obligations que chaque membre du centre doit impérativement respecter sont :</p>
+          <ul>
+            <li>Le respect du lieu dans lequel il se trouve.</li>
+            <li>Le respect de l’enseignant ainsi que des autres participants. Cela implique d’être à l’écoute de l’autre et de faire preuve d’une grande tolérance : nous pouvons tous « être dans un mauvais jour ».</li>
+            <li>L’interdiction d’utiliser un GSM pendant les séances.</li>
+            <li>L’interdiction de fumer, de se présenter à une séance en état d’ébriété ou de se trouver sous l’emprise d’une drogue.</li>
+            <li>Le paiement de la cotisation mensuelle lors du premier cours de chaque mois.</li>
+            <li>Le paiement de l’assurance annuelle au moment de l’inscription au centre, puis au début de chaque mois de septembre.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
     <section class="pricing-conditions wrap">
       <div><p class="eyebrow">Réservation</p><h2>Prêt·e à commencer ?</h2></div>
       <div>
