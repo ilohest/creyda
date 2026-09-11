@@ -2,6 +2,7 @@
 useSeoMeta({ title: 'Contact' })
 
 const directionsUrl = 'https://www.google.com/maps/search/?api=1&query=106+Avenue+G%C3%A9n%C3%A9ral+M%C3%A9decin+Derache%2C+1050+Ixelles'
+const mapUrl = 'https://www.openstreetmap.org/export/embed.html?bbox=4.3778%2C50.8102%2C4.3941%2C50.8184&layer=mapnik&marker=50.814325%2C4.385968'
 </script>
 
 <template>
@@ -62,6 +63,22 @@ const directionsUrl = 'https://www.google.com/maps/search/?api=1&query=106+Avenu
       </div>
       <div class="contact-image">
         <img src="/images/centre-creyda.jpg" alt="Entrée du centre Creyda à Ixelles">
+      </div>
+    </section>
+
+    <section class="contact-map wrap" aria-labelledby="contact-map-title">
+      <iframe
+        :src="mapUrl"
+        title="Carte du quartier autour du centre Creyda à Ixelles"
+        loading="lazy"
+        referrerpolicy="no-referrer"
+      />
+      <div class="contact-map__target" aria-hidden="true"><span /></div>
+      <div class="contact-map__card">
+        <p class="eyebrow light">50.8143° N · 4.3860° E</p>
+        <h2 id="contact-map-title">CREYDA<br>Ixelles</h2>
+        <p>106 avenue Général Médecin Derache<br>1050 Bruxelles</p>
+        <a :href="directionsUrl" target="_blank" rel="noopener noreferrer">Ouvrir l’itinéraire <span>↗</span></a>
       </div>
     </section>
 
