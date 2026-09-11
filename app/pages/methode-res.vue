@@ -56,6 +56,26 @@ const laws = [
   'La loi de la gravitation et son contraire : celle de l’élévation.',
   'La loi de la rétroaction : involution et évolution.'
 ]
+
+const activeStep = ref(0)
+
+const stepOffset = (index: number) => {
+  const count = steps.length
+  const forward = (index - activeStep.value + count) % count
+  return forward > Math.floor(count / 2) ? forward - count : forward
+}
+
+const stepClass = (index: number) => {
+  const offset = stepOffset(index)
+  if (offset === 0) return 'is-active'
+  if (offset === -1) return 'is-previous'
+  if (offset === 1) return 'is-next'
+  return 'is-hidden'
+}
+
+const changeStep = (direction: number) => {
+  activeStep.value = (activeStep.value + direction + steps.length) % steps.length
+}
 </script>
 
 <template>
@@ -105,12 +125,37 @@ const laws = [
           <p class="steps-intro">Ouverte à tous et étalée sur un minimum de 200 heures, cette méthode de transformation suit les cinq animaux du kung-fu. L’équilibre retrouvé est l’aboutissement d’un travail personnel.</p>
         </div>
       </header>
-      <ol>
-        <li v-for="(step, index) in steps" :key="step.title">
-          <span>0{{ index + 1 }}</span>
-          <div><h3>{{ step.title }}</h3><p>{{ step.text }}</p><blockquote v-if="step.quote">« {{ step.quote }} »</blockquote></div>
-        </li>
-      </ol>
+      <div
+        class="steps-carousel"
+        role="region"
+        aria-roledescription="carrousel"
+        aria-label="Les cinq étapes de la méthode R.E.S."
+        tabindex="0"
+        @keydown.left.prevent="changeStep(-1)"
+        @keydown.right.prevent="changeStep(1)"
+      >
+        <ol class="steps-carousel__track">
+          <li
+            v-for="(step, index) in steps"
+            :key="step.title"
+            class="steps-card"
+            :class="stepClass(index)"
+            :aria-hidden="index !== activeStep"
+          >
+            <span>0{{ index + 1 }}</span>
+            <div>
+              <h3>{{ step.title }}</h3>
+              <p>{{ step.text }}</p>
+              <blockquote v-if="step.quote">« {{ step.quote }} »</blockquote>
+            </div>
+          </li>
+        </ol>
+        <div class="steps-carousel__controls">
+          <button type="button" aria-label="Afficher l’étape précédente" @click="changeStep(-1)">←</button>
+          <p aria-live="polite"><span>0{{ activeStep + 1 }}</span> / 05</p>
+          <button type="button" aria-label="Afficher l’étape suivante" @click="changeStep(1)">→</button>
+        </div>
+      </div>
       <p class="res-signature">Patrick Noblet, auteur de la méthode R.E.S.</p>
     </section>
 
@@ -121,8 +166,10 @@ const laws = [
     </section>
 
     <section class="res-training wrap">
-      <header class="res-section-heading"><p class="eyebrow">La formation</p><h2>Deux années pour apprendre puis transmettre.</h2></header>
-      <div class="res-training__intro"><p>Depuis la parution d’un premier article dans la revue <em>Bio-info</em>, avant 2010, la méthode R.E.S. n’a cessé d’évoluer et de se transformer jusqu’à sa forme actuelle.</p></div>
+      <header class="res-training__heading">
+        <div><p class="eyebrow">La formation</p><h2>Deux années pour apprendre puis transmettre.</h2></div>
+        <div class="res-training__intro"><p>Depuis la parution d’un premier article dans la revue <em>Bio-info</em>, avant 2010, la méthode R.E.S. n’a cessé d’évoluer et de se transformer jusqu’à sa forme actuelle.</p></div>
+      </header>
       <div class="res-years">
         <article>
           <span>Année 01</span><h3>Apprentissage</h3>
