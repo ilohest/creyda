@@ -1,0 +1,8 @@
+node_modules/
+.nuxt/
+.output/
+.sites-runtime/
+*.sql
+*.sql.gz
+*.sql.zip
+www.zip
