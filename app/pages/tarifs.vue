@@ -127,7 +127,7 @@ const res = [
     </section>
 
     <section class="pricing-conditions wrap">
-      <div><p class="eyebrow">Réservation</p><h2>Prêt·e à commencer ?</h2></div>
+      <div><p class="eyebrow">Réservation</p><h2>Prêt·e à commencer&nbsp;?</h2></div>
       <div>
         <p><strong>La réservation par téléphone ou par e-mail est obligatoire.</strong></p>
         <p>En cas de cessation des activités par le bénéficiaire avant la date d’échéance, aucun remboursement ne pourra être demandé.</p>
