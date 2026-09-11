@@ -75,13 +75,13 @@ useHead({
     </section>
 
     <section class="opening wrap">
+      <h2 class="opening-title">Quand une sagesse ancienne rencontre votre quotidien.</h2>
       <aside>
         <p>Des cours accessibles à tous,<br>au cœur d’Ixelles.</p>
         <NuxtLink to="/contact" class="text-link">Cours d’essai <span>→</span></NuxtLink>
         <RadiantMark class="sun-mark" />
       </aside>
       <div class="opening-main">
-        <h2>Quand une sagesse ancienne rencontre votre quotidien.</h2>
         <div class="opening-gallery">
           <figure>
             <img src="/images/gallery/pratique-01.jpg" alt="Pratique au sol pendant un cours de yoga au centre Creyda">
@@ -115,12 +115,12 @@ useHead({
         <h2>Pratiquer au fil de la semaine.</h2>
         <p>Les cours durent au minimum 90 minutes. Ils sont ouverts aux personnes débutantes comme avancées.</p>
         <p class="schedule-note">Les séances de bien-être sont proposées sur réservation téléphonique.</p>
-        <NuxtLink to="/tarifs" class="text-link schedule-link">Voir les tarifs <span>→</span></NuxtLink>
       </div>
       <div class="schedule-cards">
         <article><p>Matin</p><strong>10h30 — 12h00</strong><span>Du mardi au vendredi</span></article>
         <article><p>Fin de journée</p><strong>17h30 — 19h00</strong><span>Du dimanche au vendredi</span></article>
       </div>
+      <NuxtLink to="/tarifs" class="text-link schedule-link">Voir les tarifs <span>→</span></NuxtLink>
     </section>
 
     <section class="res-teaser">
