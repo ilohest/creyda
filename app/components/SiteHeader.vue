@@ -8,7 +8,8 @@ const links = [
   { to: '/yoga', label: 'Le yoga' },
   { to: '/bien-etre', label: 'Bien-être' },
   { to: '/methode-res', label: 'Méthode R.E.S.' },
-  { to: '/tarifs', label: 'Tarifs' }
+  { to: '/tarifs', label: 'Tarifs' },
+  { to: '/galerie', label: 'Galerie' }
 ]
 </script>
 
