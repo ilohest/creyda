@@ -78,7 +78,7 @@ const mapUrl = 'https://www.openstreetmap.org/export/embed.html?bbox=4.3778%2C50
         <p class="eyebrow light">50.8143° N · 4.3860° E</p>
         <h2 id="contact-map-title">CREYDA<br>Ixelles</h2>
         <p>106 avenue Général Médecin Derache<br>1050 Bruxelles</p>
-        <a :href="directionsUrl" target="_blank" rel="noopener noreferrer">Ouvrir l’itinéraire <span>↗</span></a>
+        <a :href="directionsUrl" target="_blank" rel="noopener noreferrer">Ouvrir l’itinéraire <span>→</span></a>
       </div>
     </section>
 

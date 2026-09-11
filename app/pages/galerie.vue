@@ -63,7 +63,7 @@ onBeforeUnmount(() => window.removeEventListener('keydown', handleKeydown))
         <figure v-for="(photo, index) in photos" :key="photo.src" class="gallery-item" :class="`gallery-item--${photo.shape}`">
           <button type="button" :aria-label="`Agrandir l’image : ${photo.caption}`" @click="activeIndex = index">
             <img :src="photo.src" :alt="photo.alt" :loading="index < 2 ? 'eager' : 'lazy'" width="1920" height="1920">
-            <span aria-hidden="true">↗</span>
+            <span aria-hidden="true">+</span>
           </button>
           <figcaption><span>{{ String(index + 1).padStart(2, '0') }}</span>{{ photo.caption }}</figcaption>
         </figure>

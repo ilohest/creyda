@@ -9,14 +9,14 @@ useSeoMeta({ title: 'Centre de yoga intégral à Ixelles' })
       <h1>Yoga<br>avec Creyda</h1>
       <div class="hero-intro">
         <p>Une pratique traditionnelle pour retrouver le mouvement juste, le souffle et l’attention.</p>
-        <NuxtLink to="/contact" class="text-link">Réserver un cours <span>↘</span></NuxtLink>
+        <NuxtLink to="/contact" class="text-link">Réserver un cours <span>→</span></NuxtLink>
       </div>
     </section>
 
     <section class="opening wrap">
       <aside>
         <p>Des cours accessibles à tous,<br>au cœur d’Ixelles.</p>
-        <NuxtLink to="/contact" class="text-link">Cours d’essai <span>↘</span></NuxtLink>
+        <NuxtLink to="/contact" class="text-link">Cours d’essai <span>→</span></NuxtLink>
         <RadiantMark class="sun-mark" />
       </aside>
       <div class="opening-main">
