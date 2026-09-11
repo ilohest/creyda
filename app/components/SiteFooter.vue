@@ -21,6 +21,7 @@
       <nav aria-label="Navigation de pied de page">
         <span class="footer-label">Explorer</span>
         <NuxtLink to="/yoga">Le yoga</NuxtLink>
+        <NuxtLink to="/bien-etre">Bien-être</NuxtLink>
         <NuxtLink to="/methode-res">Méthode R.E.S.</NuxtLink>
         <NuxtLink to="/tarifs">Tarifs</NuxtLink>
         <NuxtLink to="/contact">Contact</NuxtLink>

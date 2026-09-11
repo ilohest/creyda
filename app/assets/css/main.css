@@ -304,6 +304,42 @@ h2 { font-size: clamp(3rem, 6.2vw, 6.8rem); }
 .account-card--light { background: var(--mint); color: var(--ink); transform: translateY(30px) rotate(.45deg); }
 .account-card__iban { margin: auto 0 0; font-family: var(--display); font-size: clamp(2rem, 3.2vw, 3.6rem); line-height: 1.02; letter-spacing: -.035em; }
 .account-grid blockquote { grid-column: 1 / -1; margin: 70px 0 0; font-family: var(--display); font-size: clamp(2.2rem, 4vw, 4.5rem); font-style: normal; line-height: 1; text-align: right; }
+.wellbeing-page { overflow: hidden; }
+.wellbeing-opening { padding: 90px 0 130px; display: grid; grid-template-columns: 1.05fr .95fr; align-items: stretch; }
+.wellbeing-opening__image img { width: 100%; height: 100%; min-height: 850px; object-fit: cover; filter: grayscale(1) contrast(1.06); }
+.wellbeing-opening__copy { padding: 80px 0 70px 7vw; display: flex; flex-direction: column; align-items: flex-start; }
+.wellbeing-opening__copy h2 { margin: 30px 0 45px; font-size: clamp(3rem, 5vw, 5.7rem); }
+.wellbeing-opening__copy > p:not(.eyebrow, .wellbeing-disclaimer) { max-width: 650px; color: var(--muted); }
+.wellbeing-facts { width: 100%; margin: 40px 0 28px; display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+.wellbeing-facts div { min-height: 150px; padding: 24px; display: flex; flex-direction: column; justify-content: space-between; background: var(--mint); }
+.wellbeing-facts span { color: var(--green); font-size: .68rem; text-transform: uppercase; letter-spacing: .14em; }
+.wellbeing-facts strong { font-family: var(--display); font-size: clamp(2rem, 3vw, 3.5rem); font-weight: 400; }
+.wellbeing-disclaimer { max-width: 610px; margin-bottom: 35px; color: var(--muted); font-size: .74rem; }
+.wellbeing-quote { min-height: 610px; padding: 110px max(40px, calc((100vw - 1180px)/2)); display: flex; flex-direction: column; justify-content: center; position: relative; overflow: hidden; background: var(--green); color: var(--white); }
+.wellbeing-quote__mark { width: clamp(350px, 48vw, 720px); position: absolute; right: -12vw; bottom: -48%; opacity: .12; }
+.wellbeing-quote blockquote { max-width: 1050px; margin: 0; position: relative; z-index: 1; font-family: var(--display); font-size: clamp(3.1rem, 6vw, 7rem); font-style: normal; line-height: .98; letter-spacing: -.045em; }
+.wellbeing-quote > p { max-width: 520px; margin: 45px 0 0 auto; position: relative; z-index: 1; color: rgba(255,255,255,.72); }
+.conscious-day { padding: 150px 0; display: grid; grid-template-columns: .72fr 1.28fr; gap: 9vw; }
+.conscious-day__head { align-self: start; position: sticky; top: 120px; }
+.conscious-day__head h2 { margin: 30px 0 40px; font-size: clamp(3.4rem, 6vw, 6.8rem); }
+.conscious-day__head > p:last-child { max-width: 430px; color: var(--muted); }
+.conscious-day__steps details { margin-bottom: 14px; background: var(--mist); }
+.conscious-day__steps summary { padding: 28px 30px; display: grid; grid-template-columns: 52px 1fr 34px; gap: 18px; align-items: center; cursor: pointer; list-style: none; }
+.conscious-day__steps summary::-webkit-details-marker { display: none; }
+.conscious-day__steps summary > span { color: var(--green); font-size: .68rem; letter-spacing: .14em; }
+.conscious-day__steps h3 { margin: 0; font-size: clamp(1.7rem, 2.8vw, 2.8rem); }
+.conscious-day__steps summary i { width: 32px; height: 32px; display: grid; place-items: center; border: 1px solid var(--ink); border-radius: 50%; font-family: var(--body); font-size: 1rem; font-style: normal; transition: transform .3s ease, background-color .3s ease, color .3s ease; }
+.conscious-day__steps details[open] summary i { transform: rotate(45deg); background: var(--green); border-color: var(--green); color: var(--white); }
+.conscious-day__content { padding: 0 84px 38px 100px; color: var(--muted); }
+.conscious-day__content ul { margin: 24px 0 0; padding: 0; list-style: none; }
+.conscious-day__content li { margin-top: 12px; padding-left: 24px; position: relative; }
+.conscious-day__content li::before { content: "→"; position: absolute; left: 0; color: var(--green); }
+.wellbeing-cta { margin-bottom: 120px; padding: 90px; display: grid; grid-template-columns: 1fr 1fr; gap: 9vw; background: var(--green); color: var(--white); }
+.wellbeing-cta h2 { margin: 28px 0 0; font-size: clamp(3rem, 5vw, 5.8rem); }
+.wellbeing-cta > div:last-child { display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-end; }
+.wellbeing-cta > div:last-child > p { max-width: 540px; color: rgba(255,255,255,.76); }
+.wellbeing-cta .button { margin-top: 25px; }
+.wellbeing-cta__link { margin-top: 30px; }
 .legal { max-width: 780px; padding: 80px 0; }
 .legal h2 { margin-top: 50px; font-size: 2rem; }
 .legal a { text-decoration: underline; }
@@ -341,7 +377,7 @@ h2 { font-size: clamp(3rem, 6.2vw, 6.8rem); }
   .practice-band, .res-photo { margin-inline: 24px; grid-template-columns: 1fr; }
   .practice-image img { max-height: 72vh; }
   .schedule, .visit { padding: 100px 0; }
-  .schedule, .visit, .split-copy, .res-story, .res-rebirth__grid, .res-section-heading, .res-philosophy, .res-practical { grid-template-columns: 1fr; gap: 50px; }
+  .schedule, .visit, .split-copy, .res-story, .res-rebirth__grid, .res-section-heading, .res-philosophy, .res-practical, .wellbeing-opening, .conscious-day, .wellbeing-cta { grid-template-columns: 1fr; gap: 50px; }
   .res-story header { position: static; }
   .res-teaser { grid-template-columns: 1fr; }
   .pillar-grid { grid-template-columns: 1fr; }
@@ -354,6 +390,9 @@ h2 { font-size: clamp(3rem, 6.2vw, 6.8rem); }
   .contact-place .button { margin-top: 42px; }
   .contact-image img { min-height: 560px; }
   .contact-support { gap: 70px; }
+  .wellbeing-opening__copy { padding: 70px 0 0; }
+  .wellbeing-opening__image img { min-height: 650px; max-height: 760px; }
+  .conscious-day__head { position: static; }
   .footer-head { grid-template-columns: 1fr; gap: 38px; }
   .footer-wordmark strong { font-size: clamp(4.5rem, 14vw, 8rem); }
   .footer-directory { grid-template-columns: 1fr 1fr; }
@@ -427,4 +466,14 @@ h2 { font-size: clamp(3rem, 6.2vw, 6.8rem); }
   .account-card { min-height: 250px; }
   .account-card--light { transform: rotate(.45deg); }
   .account-grid blockquote { grid-column: auto; margin-top: 40px; text-align: left; }
+  .wellbeing-opening { width: 100%; padding: 70px 0 90px; }
+  .wellbeing-opening__copy { width: min(100% - 32px, 1380px); margin: 0 auto; }
+  .wellbeing-opening__image img { min-height: 560px; }
+  .wellbeing-facts { margin-top: 30px; }
+  .wellbeing-quote { min-height: 520px; padding: 80px 20px; }
+  .wellbeing-quote > p { margin-left: 0; }
+  .conscious-day { padding: 90px 0; }
+  .conscious-day__steps summary { padding: 24px 20px; grid-template-columns: 36px 1fr 30px; gap: 10px; }
+  .conscious-day__content { padding: 0 20px 30px 66px; }
+  .wellbeing-cta { width: 100%; margin-bottom: 80px; padding: 65px 20px; }
 }

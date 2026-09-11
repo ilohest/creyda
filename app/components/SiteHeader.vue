@@ -6,6 +6,7 @@ watch(() => route.fullPath, () => { open.value = false })
 const links = [
   { to: '/', label: 'Accueil' },
   { to: '/yoga', label: 'Le yoga' },
+  { to: '/bien-etre', label: 'Bien-être' },
   { to: '/methode-res', label: 'Méthode R.E.S.' },
   { to: '/tarifs', label: 'Tarifs' }
 ]

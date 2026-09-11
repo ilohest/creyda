@@ -73,6 +73,7 @@ const res = [
           <div class="ticket-price"><strong>{{ item.price }}</strong><span v-if="item.unit">{{ item.unit }}</span></div>
         </article>
       </div>
+      <NuxtLink to="/bien-etre" class="text-link section-link">Découvrir les séances de bien-être <span>→</span></NuxtLink>
     </section>
 
     <section class="pricing-section wrap">
