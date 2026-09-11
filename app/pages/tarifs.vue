@@ -16,7 +16,7 @@ const yoga = [
 
 const formations = [
   { title: 'Connais-toi toi-même', price: '120 €', unit: '', details: ['« Comment se construire un corps de conscience »', '2 séances · samedi et dimanche', '2h00 par séance', '10h00–12h00 et 14h00–16h30', 'Groupe de 5 personnes minimum'] },
-  { title: 'Méditation, techniques thérapeutiques et philosophie', price: '30 €', unit: '', details: ['Chaque 4e samedi du mois', '09h30–12h00 et 13h30–16h00', 'Réservation au minimum 8 jours avant'] }
+  { title: 'Méditation, techniques thérapeutiques et philosophie', price: '30 €', unit: '', details: ['Méditation en trois phases : concentration / rappel de soi, contemplation / raison, absorption / identification', 'Techniques thérapeutiques pour améliorer son bien-être et celui de son entourage', 'Présentation et réflexion autour d’un thème philosophique', 'Chaque 4e samedi du mois', '09h30–12h00 et 13h30–16h00', 'Réservation au minimum 8 jours avant'] }
 ]
 
 const wellbeing = [

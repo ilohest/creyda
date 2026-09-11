@@ -200,7 +200,7 @@ h2 { font-size: clamp(3rem, 6.2vw, 6.8rem); }
 .pillar-grid article { min-height: 340px; padding: clamp(28px, 3.2vw, 44px); background: var(--mist); }
 .pillar-grid article + article { padding-left: clamp(28px, 3.2vw, 44px); }
 .pillar-grid article > span { color: var(--green); font-size: .75rem; }
-.pillar-grid h2 { margin-top: 100px; font-size: 2rem; }
+.pillar-grid h2 { margin-top: 72px; font-size: 2rem; }
 .pillar-grid p { color: var(--muted); }
 .split-copy { padding: 120px 0; display: grid; grid-template-columns: 1fr 1fr; gap: 10vw; }
 .split-copy h2 { margin: 0; }
