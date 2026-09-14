@@ -82,12 +82,13 @@ useHead({
         <RadiantMark class="sun-mark" />
       </aside>
       <div class="opening-main">
+        <p class="opening-intro">À Bruxelles, notre équipe vous accompagne dans une pratique qui révèle votre potentiel créateur. Par un mouvement conscient et dynamique, revenez à l’essentiel et laissez peu à peu émerger <strong>« la joie de vivre, la paix du corps et de l’esprit »</strong>. Un enseignement simple et profond, pensé pour répondre aux besoins de la vie moderne.</p>
         <div class="opening-gallery">
           <figure>
             <img src="/images/gallery/pratique-01.jpg" srcset="/images/gallery/pratique-01-480.webp 480w, /images/gallery/pratique-01-960.webp 960w, /images/gallery/pratique-01.jpg 1920w" sizes="(max-width: 900px) 31vw, 300px" alt="Pratique au sol pendant un cours de yoga au centre Creyda" loading="lazy" decoding="async" width="1920" height="1920">
           </figure>
           <figure>
-            <img src="/images/gallery/pratique-06.jpg" srcset="/images/gallery/pratique-06-480.webp 480w, /images/gallery/pratique-06-960.webp 960w, /images/gallery/pratique-06.jpg 1656w" sizes="(max-width: 900px) 31vw, 300px" alt="Moment de méditation pendant une séance au centre Creyda" loading="lazy" decoding="async" width="1656" height="1656">
+            <img src="/images/gallery/pratique-08.jpg" srcset="/images/gallery/pratique-08-480.webp 480w, /images/gallery/pratique-08-960.webp 960w, /images/gallery/pratique-08.jpg 1624w" sizes="(max-width: 900px) 31vw, 300px" alt="Patrick Noblet accompagnant deux participantes pendant un cours de yoga au centre Creyda" loading="lazy" decoding="async" width="1624" height="1624">
           </figure>
           <figure>
             <img src="/images/gallery/pratique-09.jpg" srcset="/images/gallery/pratique-09-480.webp 480w, /images/gallery/pratique-09-960.webp 960w, /images/gallery/pratique-09.jpg 1792w" sizes="(max-width: 900px) 31vw, 300px" alt="Posture d’équilibre pratiquée au centre Creyda" loading="lazy" decoding="async" width="1792" height="1379">

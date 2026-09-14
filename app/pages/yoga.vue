@@ -12,12 +12,12 @@ const pillars = [
 <template>
   <main>
     <PageIntro eyebrow="Notre enseignement" title="Un yoga traditionnel et intégral." text="Dans la lignée d’André Van Lysebeth, trois pratiques sont étudiées avec précision, puis se superposent et s’interpénètrent dans une expérience cohérente du corps et de l’esprit." />
-    <section class="editorial-image wrap"><img src="/images/pratique-yoga.jpg" alt="Cours de yoga au centre Creyda" loading="lazy" decoding="async" width="1600" height="1600"></section>
     <section class="pillar-grid wrap">
       <article v-for="pillar in pillars" :key="pillar.number">
         <span>{{ pillar.number }}</span><h2>{{ pillar.title }}</h2><p>{{ pillar.text }}</p>
       </article>
     </section>
+    <section class="editorial-image wrap"><img src="/images/pratique-yoga.jpg" alt="Cours de yoga au centre Creyda" loading="lazy" decoding="async" width="1600" height="1600"></section>
     <section class="split-copy wrap">
       <h2>Une place pour chaque personne.</h2>
       <div>

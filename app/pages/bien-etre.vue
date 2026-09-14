@@ -131,8 +131,13 @@ function toggleDayStep(index: number) {
 
     <section class="wellbeing-quote">
       <RadiantMark variant="airy" tone="light" class="wellbeing-quote__mark" />
-      <blockquote>Regarder, respirer, toucher avec légèreté&nbsp;: revenir à des gestes simples.</blockquote>
-      <p>Une approche inspirée notamment de l’enseignement de Mikao Usui, fondateur du Reiki.</p>
+      <p class="eyebrow light">Une inspiration du Reiki</p>
+      <blockquote>« On n’utilise ni médicament, ni instrument. Tout ce que l’on fait, c’est regarder, souffler, frotter légèrement, tapoter et toucher. Voilà ce qui guérit la maladie. »</blockquote>
+      <cite>— Docteur Mikao Usui</cite>
+      <div class="wellbeing-quote__context">
+        <p>Au cours de la séance, cette phrase est comprise dans un sens large, comme une invitation à revenir au regard, au souffle et à des gestes simples. Mikao Usui est à l’origine de la mise en forme des techniques auxquelles il a donné le nom de Reiki.</p>
+        <p>Chez Creyda, cette approche accompagne la détente et le mieux-être. Elle ne constitue pas une promesse de guérison et ne remplace jamais un diagnostic, un traitement ou un suivi médical.</p>
+      </div>
     </section>
 
     <section class="conscious-day wrap">

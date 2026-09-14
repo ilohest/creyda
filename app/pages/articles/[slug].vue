@@ -15,7 +15,9 @@ const articleUrl = computed(() => `https://creyda-yoga.be/articles/${article.val
 const articleImage = computed(() => new URL(article.value.image, 'https://creyda-yoga.be').toString())
 const accessibleContent = computed(() => article.value.content
   .replaceAll('<h4>', '<h2>')
-  .replaceAll('</h4>', '</h2>'))
+  .replaceAll('</h4>', '</h2>')
+  .replace(/<h([2-4])([^>]*)>([\s\S]*?)<\/h\1>/gi, (_heading, level, attributes, content) =>
+    `<h${level}${attributes}>${content.replace(/<\/?strong>/gi, '')}</h${level}>`))
 
 useSeoMeta({
   title: () => article.value.title,
@@ -75,16 +77,15 @@ useHead(() => ({
       <p>{{ article.excerpt }}</p>
     </header>
 
-    <figure class="article-cover wrap">
+    <figure v-if="article.showCover !== false" class="article-cover wrap">
       <img :src="article.image" :alt="article.imageAlt" loading="lazy" decoding="async" width="1600" height="1000">
     </figure>
 
-    <article class="article-body wrap" v-html="accessibleContent" />
+    <article class="article-body wrap" :class="{ 'article-body--without-cover': article.showCover === false }" v-html="accessibleContent" />
 
     <section v-if="article.gallery?.length" class="article-plate-gallery wrap" aria-label="Planches du Mutus Liber">
       <figure v-for="(image, index) in article.gallery" :key="image">
         <img :src="image" :alt="`Mutus Liber — planche ${index + 1}`" loading="lazy" decoding="async" width="683" height="1024">
-        <figcaption>Planche {{ String(index + 1).padStart(2, '0') }}</figcaption>
       </figure>
     </section>
 

@@ -21,7 +21,8 @@ export default defineNuxtConfig({
         { name: 'twitter:image:alt', content: 'Creyda Yoga, centre de yoga intégral à Ixelles' }
       ],
       link: [
-        { rel: 'icon', type: 'image/png', href: '/images/logo-creyda.png' },
+        { rel: 'icon', type: 'image/png', sizes: '64x64', href: '/favicon.png' },
+        { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
         { rel: 'preload', href: '/fonts/Coconat-Regular.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous' }
       ]
     }

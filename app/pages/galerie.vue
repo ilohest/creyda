@@ -96,7 +96,6 @@ onBeforeUnmount(() => window.removeEventListener('keydown', handleKeydown))
         <figure v-for="(photo, index) in photos" :key="photo.src" class="gallery-item" :class="`gallery-item--${photo.shape}`">
           <button type="button" aria-haspopup="dialog" :aria-label="`Agrandir l’image : ${photo.caption}`" @click="openGallery(index, $event)">
             <img :src="photo.src" :alt="photo.alt" :loading="index < 2 ? 'eager' : 'lazy'" decoding="async" width="1920" height="1920">
-            <span aria-hidden="true">+</span>
           </button>
           <figcaption>{{ photo.caption }}</figcaption>
         </figure>
