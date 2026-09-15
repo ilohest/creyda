@@ -11,7 +11,7 @@ const pillars = [
 
 <template>
   <main>
-    <PageIntro eyebrow="Notre enseignement" title="Un yoga traditionnel et intégral." text="Dans la lignée d’André Van Lysebeth, trois pratiques sont étudiées avec précision, puis se superposent et s’interpénètrent dans une expérience cohérente du corps et de l’esprit." />
+    <PageIntro eyebrow="Notre enseignement" title="Le yoga." text="Un yoga traditionnel et intégral, dans la lignée d’André Van Lysebeth. Trois pratiques complémentaires pour une expérience cohérente du corps et de l’esprit." />
     <section class="pillar-grid wrap">
       <article v-for="pillar in pillars" :key="pillar.number">
         <span>{{ pillar.number }}</span><h2>{{ pillar.title }}</h2><p>{{ pillar.text }}</p>
@@ -19,7 +19,9 @@ const pillars = [
     </section>
     <section class="editorial-image wrap"><img src="/images/pratique-yoga.jpg" alt="Cours de yoga au centre Creyda" loading="lazy" decoding="async" width="1600" height="1600"></section>
     <section class="split-copy wrap">
-      <h2>Une place pour chaque personne.</h2>
+      <header class="yoga-copy-heading">
+        <h2>Une place pour chaque personne.</h2>
+      </header>
       <div>
         <p>Le yoga est enseigné dans un cadre convivial, en groupes limités à dix participants. Cette taille permet à l’enseignant de rester disponible à chaque instant et d’adapter son attention à chacun.</p>
         <p>Le travail ne se limite pas à la mécanique du mouvement : il porte une attention particulière aux fonctions autonomes de l’organisme — respiration, rythme cardiaque, tension et production hormonale.</p>
@@ -27,7 +29,8 @@ const pillars = [
         <p>Chaque séance dure au minimum 90 minutes. Les membres bénéficient d’une assurance responsabilité civile auprès de la Fédération Belge d’Hébertisme et de Yoga.</p>
       </div>
     </section>
-    <section class="cta-panel wrap">
+    <section class="cta-panel yoga-cta wrap">
+      <RadiantMark variant="dense" :weight="1.35" class="yoga-cta-mark" />
       <p class="eyebrow light">Première séance</p><h2>Venez ressentir la pratique.</h2><p>Un cours d’essai permet de découvrir l’approche et de rencontrer l’enseignant.</p><NuxtLink to="/contact" class="button button-light">Nous contacter</NuxtLink>
     </section>
   </main>

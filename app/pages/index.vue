@@ -79,7 +79,7 @@ useHead({
       <aside>
         <p>Des cours accessibles à tous,<br>au cœur d’Ixelles.</p>
         <NuxtLink to="/contact" class="text-link">Cours d’essai <span>→</span></NuxtLink>
-        <RadiantMark class="sun-mark" />
+        <RadiantMark variant="classic" class="sun-mark" />
       </aside>
       <div class="opening-main">
         <p class="opening-intro">À Bruxelles, notre équipe vous accompagne dans une pratique qui révèle votre potentiel créateur. Par un mouvement conscient et dynamique, revenez à l’essentiel et laissez peu à peu émerger <strong>« la joie de vivre, la paix du corps et de l’esprit »</strong>. Un enseignement simple et profond, pensé pour répondre aux besoins de la vie moderne.</p>

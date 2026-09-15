@@ -106,7 +106,7 @@ function toggleDayStep(index: number) {
   <main class="wellbeing-page">
     <PageIntro
       eyebrow="Séances individuelles"
-      title="Retrouver un espace de calme."
+      title="Bien-être."
       text="Décompresser, écouter ce qui se passe en soi et retrouver un état de relaxation, dans un accompagnement entièrement individuel."
     />
 

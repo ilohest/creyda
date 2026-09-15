@@ -28,7 +28,7 @@
       <span>© {{ new Date().getFullYear() }} CREYDA ASBL</span>
       <NuxtLink to="/accessibilite">Accessibilité</NuxtLink>
       <NuxtLink to="/politique-de-confidentialite">Politique de confidentialité</NuxtLink>
-      <a class="footer-credit" href="https://isaure-lohest.com/" target="_blank" rel="noopener noreferrer">WEBSITE BY ISAURE<span class="sr-only"> (nouvel onglet)</span></a>
+      <a class="footer-credit" href="https://isaure-lohest.com/" target="_blank" rel="noopener noreferrer">WEBSITE BY ISAURE <span aria-hidden="true">↗</span><span class="sr-only"> (nouvel onglet)</span></a>
     </div>
   </footer>
 </template>

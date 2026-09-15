@@ -82,7 +82,7 @@ onBeforeUnmount(() => window.removeEventListener('keydown', handleKeydown))
   <main class="gallery-page">
     <PageIntro
       eyebrow="La vie du centre"
-      title="Le yoga, en mouvement."
+      title="La galerie."
       text="Des gestes, des souffles et des moments partagés au centre Creyda."
     />
 
@@ -103,7 +103,7 @@ onBeforeUnmount(() => window.removeEventListener('keydown', handleKeydown))
     </section>
 
     <section class="gallery-closing wrap">
-      <RadiantMark variant="airy" class="gallery-closing__mark" />
+      <RadiantMark variant="half" tone="light" class="gallery-closing__mark" />
       <div>
         <h2>Et si la prochaine image était la vôtre&nbsp;?</h2>
         <NuxtLink class="button gallery-closing__button" to="/contact">Prendre contact</NuxtLink>

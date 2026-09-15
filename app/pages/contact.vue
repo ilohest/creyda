@@ -4,14 +4,13 @@ const description = 'Contactez Patrick Noblet et préparez votre venue au centre
 useSeoMeta({ title, description, ogTitle: title, ogDescription: description, twitterTitle: title, twitterDescription: description })
 
 const directionsUrl = 'https://www.google.com/maps/place/Centre+Yoga+Ixelles+:+Yoga+Bruxelles+Creyda+Sport/@50.8143634,4.3867333,17.42z/data=!4m6!3m5!1s0x47c3c4c27e6be593:0x24a3ce06f25c7f71!8m2!3d50.8143222!4d4.3885429!16s%2Fg%2F11bzx3d847?entry=ttu&g_ep=EgoyMDI2MDkwOC4wIKXMDSoASAFQAw%3D%3D'
-const mapUrl = 'https://www.openstreetmap.org/export/embed.html?bbox=4.3778%2C50.8102%2C4.3941%2C50.8184&layer=mapnik&marker=50.8143222%2C4.3885429'
 </script>
 
 <template>
   <main class="contact-page">
     <PageIntro
       eyebrow="Nous joindre"
-      title="Faisons connaissance."
+      title="Nous contacter."
       text="Pour une première séance, une formation ou une question, contactez directement Patrick Noblet."
     />
 
@@ -45,6 +44,7 @@ const mapUrl = 'https://www.openstreetmap.org/export/embed.html?bbox=4.3778%2C50
     </section>
 
     <section class="contact-place wrap">
+      <RadiantMark variant="inward" :weight="1.3" class="contact-access-mark" />
       <div class="contact-place__copy">
         <p class="eyebrow">Venir au centre</p>
         <h2>À Ixelles,<br>près de l’ULB.</h2>
@@ -70,14 +70,7 @@ const mapUrl = 'https://www.openstreetmap.org/export/embed.html?bbox=4.3778%2C50
     </section>
 
     <section class="contact-map wrap" aria-labelledby="contact-map-title">
-      <iframe
-        :src="mapUrl"
-        title="Carte du quartier autour du centre Creyda à Ixelles"
-        loading="lazy"
-        tabindex="-1"
-        referrerpolicy="no-referrer"
-      />
-      <div class="contact-map__scroll-shield" aria-hidden="true" />
+      <ContactMap />
       <div class="contact-map__card">
         <p class="eyebrow light">50.8143° N · 4.3885° E</p>
         <h2 id="contact-map-title">CREYDA<br>Ixelles</h2>

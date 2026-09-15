@@ -9,6 +9,10 @@
     "preview": "nuxt preview"
   },
   "dependencies": {
+    "leaflet": "^1.9.4",
     "nuxt": "4.5.2"
+  },
+  "devDependencies": {
+    "@types/leaflet": "^1.9.22"
   }
 }

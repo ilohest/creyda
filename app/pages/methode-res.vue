@@ -79,7 +79,7 @@ const changeStep = (direction: number) => {
 
 <template>
   <main class="res-page">
-    <PageIntro eyebrow="Rythme · Équilibre · Synchronicité" title="Une méthode pour vivre autrement." text="Créée par Patrick Noblet, la méthode R.E.S. relie travail corporel, développement personnel et réflexion philosophique pour accompagner un changement global." />
+    <PageIntro eyebrow="Rythme · Équilibre · Synchronicité" title="Méthode R.E.S." text="Créée par Patrick Noblet, la méthode R.E.S. relie travail corporel, développement personnel et réflexion philosophique pour accompagner un changement global." />
 
     <section class="quote-section wrap">
       <blockquote>« Vous devriez être le changement que vous souhaitez voir dans le monde. »</blockquote>
@@ -167,7 +167,7 @@ const changeStep = (direction: number) => {
     </section>
 
     <section class="res-manifesto wrap">
-      <RadiantMark variant="airy" class="manifesto-burst" />
+      <RadiantMark variant="round" class="manifesto-burst" />
       <p>« Une réconciliation avec soi-même, les autres et tout ce qui nous entoure. »</p>
       <NuxtLink to="/tarifs" class="text-link">Découvrir les tarifs <span>→</span></NuxtLink>
     </section>

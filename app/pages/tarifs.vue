@@ -32,8 +32,7 @@ const res = [
 
 <template>
   <main class="pricing-page">
-    <RadiantMark variant="dense" class="pricing-burst" />
-    <PageIntro class="pricing-intro" eyebrow="Cours · Formations · Bien-être" title="Choisir le rythme qui vous convient." text="Cours ponctuels, forfaits et formations : chaque formule accompagne une pratique régulière, à votre mesure." />
+    <PageIntro class="pricing-intro" eyebrow="Cours · Formations · Bien-être" title="Les tarifs." text="Cours ponctuels, forfaits et formations : chaque formule accompagne une pratique régulière, à votre mesure." />
 
     <section class="pricing-section wrap">
       <header class="pricing-heading">
@@ -95,8 +94,13 @@ const res = [
 
     <section class="pricing-philosophy wrap" aria-labelledby="pricing-philosophy-title">
       <header class="pricing-philosophy__heading">
-        <p class="eyebrow">La philosophie du centre</p>
-        <h2 id="pricing-philosophy-title">Pratiquer dans un cadre attentif.</h2>
+        <div class="pricing-philosophy__illustration">
+          <RadiantMark variant="dense" class="pricing-burst" />
+        </div>
+        <div>
+          <p class="eyebrow">La philosophie du centre</p>
+          <h2 id="pricing-philosophy-title">Pratiquer dans un cadre attentif.</h2>
+        </div>
       </header>
 
       <div class="pricing-philosophy__cards">
